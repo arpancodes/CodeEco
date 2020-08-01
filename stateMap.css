@@ -1,0 +1,46 @@
+#map    { position: relative; min-height: 500px; }
+
+.state path { stroke: #a9a9a9; stroke-width: 1px; }
+
+.state:hover path { fill-opacity: .7; }
+
+.label {
+        fill: #3a003a;
+        font-size: 12px;
+        font-weight: 300;
+        text-anchor: middle;
+        pointer-events: none;
+}
+
+.label.IND-2427 { font-size: 0; }
+.label.IND-2445 { font-size: 0; }
+.label.IND-3262 { font-size: 0; }
+.label.IND-3504 { font-size: 0; }
+
+div.tooltip {
+    position: absolute;
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: steelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+    color: white;
+}
+
+/* path {
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+} */
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}

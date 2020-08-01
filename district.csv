@@ -1,0 +1,177 @@
+District ,Block,Status,Arima Prediction,Expected
+Bagalkot,MUDHOL,Critical,Upward Trend,Semi-Critical
+Bagalkot,BAGALKOT,Over-exploited,Downward Trend,Overexploited
+Bagalkot,BADAMI,Over-exploited,Upward Trend,Critical
+Bagalkot,BILGI,Safe,Upward Trend,Safe
+Bagalkot,HUNGUND,Safe,Upward Trend,Safe
+Bagalkot,JAMKHANDI,Semi-critical,Downward Trend,Critical
+BELLARY,H.B.HALLI,Over-exploited,Downward Trend,Over-exploited
+BELLARY,SIRUGUPPA,Safe,Upward Trend,Safe
+BELLARY,BELLARY,Safe,Downward Trend,Semi-critical
+BELLARY,HOSAPETE,Safe,Downward Trend,Semi-critical
+BELLARY,SANDUR,Safe,Upward Trend,Safe
+BELLARY,KUDLIGI,Semi-critical,Upward Trend,Safe
+BELLARY,HADAGALLI,Semi-critical,Upward Trend,Safe
+Belagavi,ATHANI,Over-exploited,Downward Trend,Over-exploited
+Belagavi,SAUNDATTI,Over-exploited,Upward Trend,Critical
+Belagavi,RAMDURG,Over-exploited,Upward Trend,Critical
+Belagavi,KHANAPUR,Safe,Downward Trend,Semi-Critical
+Belagavi,BELAGAVI,Safe,Upward Trend,Safe
+Belagavi,CHIKODI,Safe,Upward Trend,Safe
+Belagavi,RAYBAG,Safe,Downward Trend,Semi-Critical
+Belagavi,HUKKERI,Semi-critical,Downward Trend,Critical
+Belagavi,GOKAK,Semi-critical,Upward Trend,Safe
+Belagavi,BAILAHONGAL,Semi-critical,Upward Trend,Safe
+BANGALORE RURAL,NELAMANGALA,Over-exploited,Upward Trend,Critical
+BANGALORE RURAL,DEVENHALLI,Over-exploited,Downward Trend,Over-exploited
+BANGALORE RURAL,HOSKOTE,Over-exploited,Downward Trend,Over-exploited
+BANGALORE RURAL,DODABALLAPUR,Over-exploited,Downward Trend,Over-exploited
+Bengaluru Urban,BENGALURU NORTH,Over-exploited,Upward Trend,Critical
+Bengaluru Urban,BENGALURU SOUTH,Over-exploited,Downward Trend,Over-exploited
+Bengaluru Urban,ANEKAL,Over-exploited,Upward Trend,Critical
+Bengaluru Urban,BENGALURU EAST,Over-exploited,Upward Trend,Semi-Critical
+Bidar,BIDAR,Safe,Upward Trend,Safe
+Bidar,HOMNABAD,Safe,Downward Trend,Semi-Critical
+Bidar,AURAD,Safe,Upward Trend,Safe
+Bidar,BASAVAKALYAN,Safe,Downward Trend,Semi-Critical
+Bidar,BHALKI,Semi-critical,Downward Trend,Semi-Critical
+CHAMRAJNAGAR,GUNDLUPET,Over-exploited,Upward Trend,Critical
+CHAMRAJNAGAR,KOLLEGAL,Semi-critical,Downward Trend,Critical
+CHAMRAJNAGAR,CHAMRAJNAGAR,Semi-critical,Downward Trend,Critical
+CHAMRAJNAGAR,YELANDUR,Semi-critical,Upward Trend,Safe
+Chikballapur,BAGEPALLI,Over-exploited,Downward Trend,Over-exploited
+Chikballapur,CHIKBALLAPUR,Over-exploited,Upward Trend,Critical
+Chikballapur,SIDLAGHATA,Over-exploited,Downward Trend,Over-exploited
+Chikballapur,GUDIBANDA,Over-exploited,Downward Trend,Over-exploited
+Chikballapur,CHINTAMANI,Over-exploited,Downward Trend,Over-exploited
+Chikballapur,GAURIBIDALUR,Over-exploited,Upward Trend,Critical
+CHIKMAGALUR,KADUR,Over-exploited,Downward Trend,Over-exploited
+CHIKMAGALUR,KOPPA,Safe,Upward Trend,Safe
+CHIKMAGALUR,N R PURA,Safe,Downward Trend,Semi-Critical
+CHIKMAGALUR,MUDIGERE,Safe,Upward Trend,Safe
+CHIKMAGALUR,SRINGERI,Safe,Upward Trend,Safe
+CHIKMAGALUR,TARIKERE,Safe,Downward Trend,Semi-Critical
+CHIKMAGALUR,CHIKMAGALUR,Safe,Downward Trend,Semi-Critical
+Chitradurga,CHALLAKERE,Over-exploited,Downward Trend,Over-exploited
+Chitradurga,HOSADURGA,Over-exploited,Upward Trend,Critical
+Chitradurga,HIRIYUR,Over-exploited,Downward Trend,Over-exploited
+Chitradurga,CHITRADURGA,Over-exploited,Upward Trend,Critical
+Chitradurga,HOLALKERE,Over-exploited,Downward Trend,Over-exploited
+Chitradurga,MOLAKALMURU,Safe,Upward Trend,Safe
+Dakshin Kannada,SULYA,Safe,Upward Trend,Safe
+Dakshin Kannada,MANGALURU,Safe,Downward Trend,Semi-critical
+Dakshin Kannada,BELTHANGADI,Safe,Downward Trend,Semi-critical
+Dakshin Kannada,BANTVAL,Safe,Upward Trend,Safe
+Dakshin Kannada,PUTTUR,Semi-critical,Upward Trend,Safe
+DAVANAGERE,DAVANAGERE,Critical,Upward Trend,Semi-critical
+DAVANAGERE,JAGALUR,Over-exploited,Upward Trend,Critical
+DAVANAGERE,HARPANAHALLI,Over-exploited,Downward Trend,Over-exploited
+DAVANAGERE,CHANNAGIRI,Over-exploited,Upward Trend,Critical
+DAVANAGERE,HONNALLI,Safe,Upward Trend,Safe
+DAVANAGERE,HARIHAR,Safe,Upward Trend,Safe
+Dharwad,KUNDAGOL,Safe,Upward Trend,Safe
+Dharwad,HUBBALLI,Safe,Downward Trend,Semi-critical
+Dharwad,NAVALGUND,Safe,Upward Trend,Safe
+Dharwad,DHARWAD,Safe,Downward Trend,Semi-critical
+Dharwad,KALGHATGI,Semi-critical,Upward Trend,Safe
+Gadag,GADAG,Over-exploited,Upward Trend,Critical
+Gadag,RON,Over-exploited,Downward Trend,Over-exploited
+Gadag,SHIRHATTI,Safe,Downward Trend,Semi-critical
+Gadag,NARGUND,Semi-critical,Downward Trend,Critical
+Gadag,MUNDARGI,Semi-critical,Upward Trend,Safe
+Hassan,C R PATNA,Critical,Downward Trend,Over-exploited
+Hassan,ARSIKERE,Over-exploited,Upward Trend,Critical
+Hassan,SAKLESHPUR,Safe,Upward Trend,Safe
+Hassan,ARKALGUD,Safe,Downward Trend,Semi-critical
+Hassan,ALUR,Safe,Upward Trend,Safe
+Hassan,HASSAN,Safe,Upward Trend,Safe
+Hassan,HOLENARSIPUR,Safe,Upward Trend,Safe
+Hassan,BELUR,Safe,Upward Trend,Safe
+Haveri,RANIBENNUR,Critical,Upward Trend,Safe
+Haveri,SHIGGAON,Safe,Downward Trend,Semi-critical
+Haveri,HANGAL,Safe,Upward Trend,Safe
+Haveri,SAVANNUR,Safe,Upward Trend,Safe
+Haveri,HAVERI,Safe,Downward Trend,Semi-critical
+Haveri,HIREKERUR,Semi-critical,Downward Trend,Critical
+Haveri,BYADGI,Semi-critical,Downward Trend,Critical
+Kalaburagi,JEVARGI,Safe,Downward Trend,Semi-critical
+Kalaburagi,CHINCHOLI,Safe,Downward Trend,Semi-critical
+Kalaburagi,SEDAM,Safe,Upward Trend,Safe
+Kalaburagi,AFZALPUR,Safe,Downward Trend,Semi-critical
+Kalaburagi,CHITHAPUR,Safe,Upward Trend,Safe
+Kalaburagi,KALABURAGI,Safe,Downward Trend,Semi-critical
+Kalaburagi,ALAND,Safe,Downward Trend,Semi-critical
+Kodagu,KODAGU,Safe,Downward Trend,Semi-critical
+Kodagu,SOMVARPET,Safe,Upward Trend,Safe
+Kodagu,VIRAJPET,Safe,Upward Trend,Safe
+Kolar,MALUR,Over-exploited,Upward Trend,Critical
+Kolar,MULBAGAL,Over-exploited,Upward Trend,Critical
+Kolar,BANGARPET,Over-exploited,Downward Trend,Over-exploited
+Kolar,KOLAR,Over-exploited,Upward Trend,Critical
+Kolar,SRINIVASPUR,Over-exploited,Upward Trend,Critical
+Koppal,YELBARGA,Critical,Upward Trend,Semi-critical
+Koppal,GANGAWATI,Safe,Downward Trend,Semi-critical
+Koppal,KUSHTAGI,Safe,Downward Trend,Semi-critical
+Koppal,KOPPAL,Safe,Upward Trend,Safe
+Mandya,SHRIRANGAPATTANA,Safe,Upward Trend,Safe
+Mandya,MANDYA,Safe,Downward Trend,Semi-critical
+Mandya,MADDUR,Safe,Upward Trend,Safe
+Mandya,PANDAVAPURA,Safe,Upward Trend,Safe
+Mandya,NAGAMANGALA,Safe,Downward Trend,Semi-critical
+Mandya,KRISHNARAJPET,Safe,Downward Trend,Semi-critical
+Mandya,MALAVALLI,Semi-critical,Upward Trend,Safe
+MYSORE,KRISHNRAJANAGARA,Safe,Upward Trend,Safe
+MYSORE,NANJANGUD,Safe,Downward Trend,Semi-critical
+MYSORE,TIRUMAKUDAL NARSIPUR,Safe,Upward Trend,Safe
+MYSORE,HEGGADADEVANKOTE,Safe,Upward Trend,Safe
+MYSORE,PRIYAPATNA,Safe,Upward Trend,Safe
+MYSORE,HUNSUR,Safe,Upward Trend,Safe
+MYSORE,MYSORE,Semi-critical,Upward Trend,Safe
+Raichur,SINDHNUR,Safe,Upward Trend,Safe
+Raichur,MANVI,Safe,Downward Trend,Semi-critical
+Raichur,DEODRUG,Safe,Downward Trend,Semi-critical
+Raichur,RAICHUR,Semi-critical,Upward Trend,Safe
+Raichur,LINGSUGUR,Semi-critical,Upward Trend,Safe
+Ramanagara,MAGADI,Critical,Downward Trend,Over-exploited
+Ramanagara,KANAKAPURA,Over-exploited,Upward Trend,Critical
+Ramanagara,RANMANAGARA,Over-exploited,Downward Trend,Over-exploited
+Ramanagara,CHANNAPATANA,Semi-critical,Downward Trend,Critical
+SHIMOGA,BHADRAVATI,Safe,Upward Trend,Safe
+SHIMOGA,TIRTHAHALLI,Safe,Upward Trend,Safe
+SHIMOGA,HOSANAGARA,Safe,Downward Trend,Semi-critical
+SHIMOGA,SHIMOGA,Safe,Downward Trend,Semi-critical
+SHIMOGA,SAGAR,Safe,Upward Trend,Safe
+SHIMOGA,SHIKARIPUR,Safe,Downward Trend,Semi-critical
+SHIMOGA,SORAB,Safe,Upward Trend,Safe
+TUMKUR,SIRA,Critical,Upward Trend,Semi-critical
+TUMKUR,MADHUGIRI,Over-exploited,Downward Trend,Over-exploited
+TUMKUR,CHICKNAYAKANHALLI,Over-exploited,Downward Trend,Over-exploited
+TUMKUR,TUMKUR,Over-exploited,Downward Trend,Over-exploited
+TUMKUR,TIPTUR,,Upward Trend,Critical
+TUMKUR,KORATAGERE,Over-exploited,Upward Trend,Critical
+TUMKUR,GUBBI,Safe,Downward Trend,Semi-critical
+TUMKUR,TURUVEKERE,Safe,Downward Trend,Semi-critical
+TUMKUR,KUNIGAL,Safe,Upward Trend,Safe
+TUMKUR,PAVAGADA,Semi-critical,Downward Trend,Critical
+Udupi,KARKAL,Safe,Upward Trend,Safe
+Udupi,UDUPI,Safe,Upward Trend,Safe
+Udupi,KUNDAPURA,Safe,Upward Trend,Safe
+Uttar kannada,SUPA,Safe,Upward Trend,Safe
+Uttar kannada,MUNDOG,Safe,Downward Trend,Semi-critical
+Uttar kannada,SIRSI,Safe,Upward Trend,Safe
+Uttar kannada,SIDDAPUR,Safe,Upward Trend,Safe
+Uttar kannada,BHATKAL,Safe,Downward Trend,Semi-critical
+Uttar kannada,KUMTA,Safe,Upward Trend,Safe
+Uttar kannada,HONAVAR,Safe,Upward Trend,Safe
+Uttar kannada,YELLAPUR,Safe,Upward Trend,Safe
+Uttar kannada,KARVAR,Safe,Upward Trend,Safe
+Uttar kannada,ANKOLA,Safe,Upward Trend,Safe
+Uttar kannada,HALIYAL,Semi-critical,Upward Trend,Safe
+BIJAPUR,INDI,Critical,Downward Trend,Over-exploited
+BIJAPUR,SINDGI,Safe,Downward Trend,Semi-critical
+BIJAPUR,BIJAPUR,Safe,Downward Trend,Semi-critical
+BIJAPUR,MUDDEBIHAL,Semi-critical,Downward Trend,Critical
+BIJAPUR,BASAVANA BAGEVADI,Semi-critical,Downward Trend,Critical
+Yadgir,SHAHPUR,Safe,Upward Trend,Safe
+Yadgir,SHORAPUR,Safe,Downward Trend,Semi-critical
+Yadgir,YADGIR,Semi-critical,Upward Trend,Safe

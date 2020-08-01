@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="stateMap.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <a href="/"
+        ><div id="brand">
+          <!-- <span><img src="./images/CMRIT_logo.png" alt="CMRIT" /></span> -->
+          <!-- <span><img src="./images/SIH_logo.png" alt="SIH" /></span> -->
+          <h2>
+            Team Code<br />
+            <span class="center-of-attraction">Eco</span>
+          </h2>
+        </div></a
+      >
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a class="cta" href="/karnataka.html">Analyse</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="map-section" class="container">
+      <!-- <h1>Hover on the Map to see the details!</h1> -->
+      <!-- <div class="stats">
+        <div class="chart" id="groundWaterdonut"></div>
+        <div class="chart" id="extractWaterdonut"></div>
+        <div class="chart" id="extractPercentdonut"></div>
+      </div> -->
+      <!-- <h1>
+        Data analytics to provide complete solution for
+        <span class="center-of-attraction">groundwater management</span>
+        for the country.
+      </h1> -->
+      <!-- <table>
+        <tr>
+          <td> -->
+      <div id="demobox">
+        <div id="map">
+          <div id="select"></div>
+        </div>
+      </div>
+    </div>
+    <!-- </td>
+          <td>
+            <!-- <div id="groundWaterdonut"></div>
+            <div id="extractWaterdonut"></div>
+            <div id="extractPercentdonut"></div> 
+          </td>
+        </tr>
+      </table> -->
+
+    <div class="container charts">
+      <div class="stats">
+        <div class="chart" id="groundWaterdonut"></div>
+        <div class="chart" id="extractWaterdonut"></div>
+        <div class="chart" id="extractPercentdonut"></div>
+      </div>
+    </div>
+    <!-- demobox -->
+    <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="//d3js.org/d3-queue.v3.min.js"></script>
+    <script src="//d3js.org/topojson.v1.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    <script src="stateMap.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
