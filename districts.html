@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <!-- India State Map  -->
-    <title>India Map</title>
+    <title>karnataka</title>
 
     <!--  Scripts  -->
 
@@ -16,455 +16,652 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.js"></script>
 
     <!--  Styles  -->
-    <link type="text/css" rel="stylesheet" href="index.css"/>
+    <link type="text/css" rel="stylesheet" href="index.css" />
     <style type="text/css">
-    #mapid {
-      background: transparent;
-      transform: scale(3.5);
-      margin-left: -0px;
+      #mapid {
+        background: transparent;
+        transform: scale(3.5);
+        margin-left: -0px;
       }
 
-    #india {
-      /* fill: #2e2c97; */
-      opacity: .8;
-      stroke: #ffffff;
-      stroke-width: .7;
+      #india {
+        /* fill: #2e2c97; */
+        opacity: 0.8;
+        stroke: #ffffff;
+        stroke-width: 0.7;
       }
-      .highcharts-background{
-        fill:rgba(255, 255, 255, 0.03);
+      .highcharts-background {
+        fill: rgba(255, 255, 255, 0.03);
       }
-      select#taluks{
+      select#taluks {
         width: 100%;
-        padding:20px;
+        padding: 20px;
         background-color: var(--light-blue);
         color: white;
         font-size: 1.1rem;
-
       }
-      .highcharts-point{
+      .highcharts-point {
         stroke: none;
       }
-       .highcharts-axis-labels text, text.highcharts-title{
-        fill:white !important;
+      .highcharts-axis-labels text,
+      text.highcharts-title {
+        fill: white !important;
       }
-      #premonsoon{
+      #premonsoon {
         margin: 10px 0;
       }
-      .container{
+      .container {
         align-items: center;
       }
-      #district-table{
+      .stats-table {
         margin: 20px;
       }
+      #status-tabs {
+        display: flex;
+        width: 50%;
+        justify-content: space-evenly;
+      }
+      #status-tabs .tab {
+        height: 70px;
+        background-color: var(--table-color);
+        width: 100%;
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.8rem;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      #status-tabs .tab:hover {
+        background-color: var(--table-color-hover);
+      }
+      #status-tabs .tab.selected {
+        background-color: rgb(0, 4, 37);
+      }
+      .no-data {
+        text-align: center;
+        width: 45%;
+      }
+      #stats-table {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #totalStages {
+        display: flex;
+        justify-content: center;
+        width: 50%;
+      }
+      #totalStages .stage {
+        margin: 80px 0px 0;
+        width: 17%;
+        height: 150px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 10px;
+        background-color: transparent;
+        cursor: pointer;
+        z-index: 100;
+      
+      }
+      #totalStages .stage h2 {
+        font-size: .9rem;
+      }
+      #totalStages .stage p {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+      #totalStages .stage.over-exploited {
+        color: var(--over-exploited);
+      }
+      #totalStages .stage.over-exploited:hover {
+        background: var(--over-exploited-hover);
+      }
+      #totalStages .stage.critical {
+        color: var(--critical);
+      }
+      #totalStages .stage.critical:hover {
+        background: var(--critical-hover);
+      }
+      #totalStages .stage.semi-critical {
+        color: var(--semi-critical);
+      }
+      #totalStages .stage.semi-critical:hover {
+        background: var(--semi-critical-hover);
+      }
+      #totalStages .stage.safe {
+        color: var(--safe);
+      }
+      #totalStages .stage.safe:hover {
+        background: var(--safe-hover);
+      }
+
+      #block-chart {
+        margin-top: -250px;
+      }
+      footer {
+        width: 100%;
+        height: 250px;
+      }
     </style>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
   </head>
 
-<body>
-  <header>
-    <a href="/"
-      ><div id="brand">
-        <!-- <span><img src="./images/CMRIT_logo.png" alt="CMRIT" /></span> -->
-        <!-- <span><img src="./images/SIH_logo.png" alt="SIH" /></span> -->
-        <h2>
-          Team Code<br />
-          <span class="center-of-attraction">Eco</span>
-        </h2>
-      </div></a
-    >
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a class="cta" href="/karnataka.html">Analyse</a></li>
-      </ul>
-    </nav>
-  </header>
+  <body>
+    <header>
+      <a href="/"
+        ><div id="brand">
+          <!-- <span><img src="./images/CMRIT_logo.png" alt="CMRIT" /></span> -->
+          <!-- <span><img src="./images/SIH_logo.png" alt="SIH" /></span> -->
+          <h2>
+            Team Code<br />
+            <span class="center-of-attraction">Eco</span>
+          </h2>
+        </div></a
+      >
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a class="cta" href="/karnataka.html">Analyse</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <div class="container">
+    <div id="totalStages"></div>
+    <div class="container">
+      <div style="font-color: white;">
+        <svg
+          width="200"
+          height="230"
+          style="color: white; margin-left: -150px;"
+        >
+          <!-- <rect x="50" y="55" width="30" height="30" style="fill:rgb(187, 39, 57);stroke:gray;stroke-width:1;" /> <text x="90" y="75" fill="rgb(187, 39, 57)">Exploited</text> -->
+          <rect
+            x="50"
+            y="55"
+            width="30"
+            height="30"
+            style="fill: rgb(234, 51, 35); stroke: gray; stroke-width: 1;"
+          />
+          <text x="90" y="75" fill="rgb(234, 51, 35)">Over Exploited</text>
+          <rect
+            x="50"
+            y="90"
+            width="30"
+            height="30"
+            style="fill: rgb(140, 28, 100); stroke: gray; stroke-width: 1;"
+          />
+          <text x="90" y="110" fill="rgb(140, 28, 100)">Critical</text>
+          <rect
+            x="50"
+            y="125"
+            width="30"
+            height="30"
+            style="fill: rgb(93, 21, 147); stroke: gray; stroke-width: 1;"
+          />
+          <text x="90" y="145" fill="rgb(93, 21, 147)">Semi Critical</text>
+          <rect
+            x="50"
+            y="160"
+            width="30"
+            height="30"
+            style="fill: rgb(44, 20, 196); stroke: gray; stroke-width: 1;"
+          />
+          <text x="90" y="180" fill="rgb(44, 20, 196)">Safe</text>
+        </svg>
+      </div>
 
+      <div id="chart" class="district-map"></div>
 
+      <div id="block-chart" style="width: 800px; margin-left: 250px;">
+        <p id="selecteddistrict">Select a district from the map!</p>
+        <select id="taluks" onChange="onTalukChange()"> </select>
 
-<div  style="font-color:white;">
-  <table id="totalStages" style="color:white;width:150px; margin-left: -100px;"> </table>
-
-    <svg width="200" height="230" style="color:white; margin-left: -150px;" >
-  <rect x="50" y="20" width="30" height="30" style="fill:rgb(234, 51, 35);stroke:gray;stroke-width:1;" /> <text x="90" y="40" fill="rgb(234, 51, 35)">Over Exploited</text>
-  <rect x="50" y="55" width="30" height="30" style="fill:rgb(187, 39, 57);stroke:gray;stroke-width:1;" /> <text x="90" y="75" fill="rgb(187, 39, 57)">Exploited</text>
-  <rect x="50" y="90" width="30" height="30" style="fill:rgb(140, 28, 100);stroke:gray;stroke-width:1;" /> <text x="90" y="110" fill="rgb(140, 28, 100)">Critical</text>
-  <rect x="50" y="125" width="30" height="30" style="fill:rgb(93, 21, 147);stroke:gray;stroke-width:1;" /> <text x="90" y="145" fill="rgb(93, 21, 147)">Semi Critical</text>
-  <rect x="50" y="160" width="30" height="30" style="fill:rgb(44, 20, 196);stroke:gray;stroke-width:1;" /> <text x="90" y="180" fill="rgb(44, 20, 196)">Safe</text>
-</svg>
-
-</div>
-
-    <div id="chart" class="district-map"></div>
-    <div style="width:800px;margin-left:250px;">
-      <p id="selecteddistrict">Select a district from the map!</p>
-    <select id="taluks" onChange="onTalukChange()">
-
-    </select>
-
-    <div id="premonsoon"></div>
-      <div id="postmonsoon"> </div>
+        <div id="premonsoon"></div>
+        <div id="postmonsoon"></div>
+      </div>
     </div>
-  </div>
-  <div id="district-table"></div>
+    <div class="stats-table">
+      <div id="status-tabs">
+        <div class="tab selected">All</div>
+        <div class="tab">Over Exploited</div>
+        <div class="tab">Critical</div>
+        <div class="tab">Semi Critical</div>
+        <div class="tab">Safe</div>
+      </div>
+      <div id="district-table"></div>
+    </div>
 
+    <footer></footer>
 
+    <script type="text/javascript">
+      var groupBy = function (xs, key) {
+        return xs.reduce(function (rv, x) {
+          (rv[x[key]] = rv[x[key]] || []).push(x);
+          return rv;
+        }, {});
+      };
 
-  <script type="text/javascript">
+      let karnatakadata = JSON.parse(localStorage.getItem("karnatakadata"));
+      let premonsoondata = JSON.parse(localStorage.getItem("premonsoon"));
+      let postmonsoondata = JSON.parse(localStorage.getItem("postmonsoon"));
 
-  var groupBy = function (xs, key) {
-    return xs.reduce(function (rv, x) {
-      (rv[x[key]] = rv[x[key]] || []).push(x);
-      return rv;
-    }, {});
-  };
+      let premansoondistricts = groupBy(premonsoondata, "District");
+      let postmonsoondistricts = groupBy(postmonsoondata, "District");
 
-  let karnatakadata = JSON.parse(localStorage.getItem("karnatakadata"));
-  let premonsoondata = JSON.parse(localStorage.getItem("premonsoon"));
-  let postmonsoondata = JSON.parse(localStorage.getItem("postmonsoon"));
+      console.log(premansoondistricts);
 
-  let premansoondistricts = groupBy(premonsoondata, "District")
-  let postmonsoondistricts = groupBy(postmonsoondata, "District")
+      function init() {
+        loaddistrictmap();
+      }
 
-  console.log(premansoondistricts);
+      let premansoontaluk;
+      let postmonsoontaluk;
+      let selectedDistrict;
+      let statusFilter;
+      const statusTabs = document.querySelectorAll("#status-tabs .tab");
+      statusTabs.forEach((innertab) => (innertab.style.display = "none"));
+      const deselectTabs = () => {
+        statusTabs.forEach((innertab) => innertab.classList.remove("selected"));
+      };
+      statusTabs.forEach((tab) =>
+        tab.addEventListener("click", (e) => {
+          deselectTabs();
+          statusFilter = e.target.textContent;
+          filterdistrictdata(selectedDistrict, statusFilter);
+          tab.classList.add("selected");
+        })
+      );
 
-  function init() {
+      function filterdistrictdata(districtname, statusFilter = undefined) {
+        deselectTabs();
 
-    loaddistrictmap();
+        document.getElementById("selecteddistrict").innerHTML =
+          "Selected District: " + districtname;
 
-  }
+        var selectedtaluks = premansoondistricts[districtname];
+        premansoontaluk = premansoondistricts[districtname];
+        postmonsoontaluk = postmonsoondistricts[districtname];
+        document.getElementById("taluks").innerHTML = "";
+        var dynamicSelect = document.getElementById("taluks");
 
-let premansoontaluk;
-let postmonsoontaluk;
+        selectedtaluks.forEach(function (item) {
+          var newOption = document.createElement("option");
+          newOption.text = item["Tehsil/Block"].toString(); //item.whateverProperty
+          console.log(newOption.text);
+          dynamicSelect.add(newOption);
 
-function filterdistrictdata(districtname) {
-
-  document.getElementById("selecteddistrict").innerHTML = "Selected District: " + districtname;
-
-  var selectedtaluks = premansoondistricts[districtname];
-  premansoontaluk = premansoondistricts[districtname];
-  postmonsoontaluk = postmonsoondistricts[districtname];
-  document.getElementById("taluks").innerHTML = "";
-  var dynamicSelect = document.getElementById("taluks");
-
-      selectedtaluks.forEach(function(item){
-                var newOption = document.createElement("option");
-                newOption.text = item['Tehsil/Block'].toString();//item.whateverProperty
-                console.log(newOption.text);
-                dynamicSelect.add(newOption);
-
-                //new select items should populated immediately
+          //new select items should populated immediately
         });
 
-        displaytalukchart(0)
+        displaytalukchart(0);
 
-        console.log(districtname)
+        console.log(districtname);
 
+        function arrayToTable(tableData) {
+          var table = $("<table></table>");
+          $(tableData).each(function (i, rowData) {
+            var row = $("<tr></tr>");
+            $(rowData).each(function (j, cellData) {
+              if (j === 3 && i != 0) {
+                cellData.toUpperCase() === "Upward Trend".toUpperCase()
+                  ? row.append($("<td class='up-trend'>" + cellData + "</td>"))
+                  : row.append(
+                      $("<td class='down-trend'>" + cellData + "</td>")
+                    );
+              } else row.append($("<td>" + cellData + "</td>"));
+            });
+            table.append(row);
+          });
+          return table;
+        }
 
-function arrayToTable(tableData) {
-  var table = $("<table></table>");
-  $(tableData).each(function (i, rowData) {
-    var row = $("<tr></tr>");
-    $(rowData).each(function (j, cellData) {
-      if(j === 3 && i != 0)
-      {
-        cellData.toUpperCase() === "Upward Trend".toUpperCase()?
-        row.append($("<td class='up-trend'>" + cellData + "</td>")):
-        row.append($("<td class='down-trend'>" + cellData + "</td>"));
+        $.ajax({
+          type: "GET",
+          url: "./district.csv",
+          success: function (data) {
+            const dataArr = Papa.parse(data).data;
+            let filteredData = dataArr.filter((dist, i) => {
+              if (i === 0) return true;
+              console.log("Array District name: ", dist[0].toUpperCase());
+              console.log("District name: ", districtname.toUpperCase());
+              if (dist[0].toUpperCase() === districtname.toUpperCase())
+                return true;
+              return false;
+            });
+            if (statusFilter && statusFilter !== "All") {
+              filteredData = filteredData.filter((dist, i) => {
+                if (i === 0) return true;
+                const dataFilter = dist[2].split("-").join(" ").toUpperCase();
+                const globalFilter = statusFilter.toUpperCase();
+                console.log(dataFilter === globalFilter);
+                if (dataFilter === globalFilter) return true;
+                return false;
+              });
+            }
+            console.log(filteredData);
+
+            statusTabs.forEach((tab, i) => {
+              if (!statusFilter && i === 0) tab.classList.add("selected");
+              tab.style.display = "flex";
+            });
+
+            if (filteredData.length > 1)
+              $("#district-table").html(arrayToTable(filteredData));
+            else $("#district-table").html(`<p class="no-data">No data</p>`);
+          },
+        });
       }
-      else
-      row.append($("<td>" + cellData + "</td>"));
-    });
-    table.append(row);
-  });
-  return table;
-}
 
-$.ajax({
-  type: "GET",
-  url: "./district.csv",
-  success: function (data) {
-    const dataArr = Papa.parse(data).data;
-    const filteredData = dataArr.filter((dist, i) => {
-      if(i===0) return true;
-      console.log('Array District name: ',dist[0].toUpperCase())
-      console.log('District name: ',districtname.toUpperCase())
-      if(dist[0].toUpperCase() === districtname.toUpperCase()) return true;
-      return false;
-    })
-    console.log(filteredData)
+      function onTalukChange() {
+        displaytalukchart(document.getElementById("taluks").selectedIndex);
+      }
 
-    $("#district-table").html(arrayToTable(filteredData));
-  },
-});
+      function displaytalukchart(index) {
+        console.log(premansoontaluk[index], postmonsoontaluk[index]);
 
+        let preyearkeys = Object.keys(premansoontaluk[index]).slice(3);
+        let postyearkeys = Object.keys(postmonsoontaluk[index]).slice(3);
 
-}
+        let premonsoonchartdata = [];
+        let postmonsoonchartdata = [];
+        for (var i = 0; i < preyearkeys.length; i++) {
+          var predatum = [];
+          var postdatum = [];
+          postdatum.push(postyearkeys[i].split("Postmonsoon of")[1]);
+          postdatum.push(parseInt(postmonsoontaluk[index][postyearkeys[i]]));
+          predatum.push(preyearkeys[i].split("Premonsoon of")[1]);
+          predatum.push(parseInt(premansoontaluk[index][preyearkeys[i]]));
 
-function onTalukChange() {
-
-  displaytalukchart(document.getElementById("taluks").selectedIndex);
-
-}
-
-function displaytalukchart(index) {
-console.log(premansoontaluk[index], postmonsoontaluk[index]);
-
-let preyearkeys = Object.keys(premansoontaluk[index]).slice(3);
-let postyearkeys = Object.keys(postmonsoontaluk[index]).slice(3);
-
-let premonsoonchartdata = [];
-let postmonsoonchartdata = [];
-for (var i = 0; i < preyearkeys.length; i++) {
-  var predatum = [];
-  var postdatum = [];
-  postdatum.push(postyearkeys[i].split("Postmonsoon of")[1]);
-  postdatum.push(parseInt(postmonsoontaluk[index][postyearkeys[i]]));
-  predatum.push(preyearkeys[i].split("Premonsoon of")[1]);
-  predatum.push(parseInt(premansoontaluk[index][preyearkeys[i]]));
-
-  premonsoonchartdata.push(predatum);
-  postmonsoonchartdata.push(postdatum);
-}
-
-
-console.log(premonsoonchartdata);
-console.log(postmonsoonchartdata);
-
-Highcharts.chart('premonsoon', {
-    chart: {
-        type: 'column'
-    },
-    title: {
-        text: 'Premonsoon of Taluk ' + premansoontaluk[index]['Tehsil/Block']
-    },
-    xAxis: {
-        type: 'category',
-        labels: {
-            rotation: -45,
-            style: {
-                fontSize: '13px',
-                fontFamily: 'Verdana, sans-serif'
-            }
+          premonsoonchartdata.push(predatum);
+          postmonsoonchartdata.push(postdatum);
         }
-    },
-    yAxis: {
-        min: 0,
-        title: {
-            text: ''
-        }
-    },
-    legend: {
-        enabled: false
-    },
-    exporting: {
-      enabled: false
-    },
-    credits: {
-      enabled: false
-    },
-    series: [{
-        name: 'Pre Mansoon',
-        data: premonsoonchartdata,
-        dataLabels: {
-            enabled: true,
-            rotation: -90,
-            color: '#FFFFFF',
-            align: 'right',
-            format: '{point.y:.1f}', // one decimal
-            y: 10, // 10 pixels down from the top
-            style: {
-                fontSize: '13px',
-                fontFamily: 'Verdana, sans-serif'
-            }
-        }
-    }]
-});
+
+        console.log(premonsoonchartdata);
+        console.log(postmonsoonchartdata);
+
+        Highcharts.chart("premonsoon", {
+          chart: {
+            type: "column",
+          },
+          title: {
+            text:
+              "Premonsoon of Taluk " + premansoontaluk[index]["Tehsil/Block"],
+          },
+          xAxis: {
+            type: "category",
+            labels: {
+              rotation: -45,
+              style: {
+                fontSize: "13px",
+                fontFamily: "Verdana, sans-serif",
+              },
+            },
+          },
+          yAxis: {
+            min: 0,
+            title: {
+              text: "",
+            },
+          },
+          legend: {
+            enabled: false,
+          },
+          exporting: {
+            enabled: false,
+          },
+          credits: {
+            enabled: false,
+          },
+          series: [
+            {
+              name: "Pre Mansoon",
+              data: premonsoonchartdata,
+              dataLabels: {
+                enabled: true,
+                rotation: -90,
+                color: "#FFFFFF",
+                align: "right",
+                format: "{point.y:.1f}", // one decimal
+                y: 10, // 10 pixels down from the top
+                style: {
+                  fontSize: "13px",
+                  fontFamily: "Verdana, sans-serif",
+                },
+              },
+            },
+          ],
+        });
+
+        Highcharts.chart("postmonsoon", {
+          chart: {
+            type: "column",
+          },
+          title: {
+            text:
+              "Postmonsoon of Taluk " + premansoontaluk[index]["Tehsil/Block"],
+          },
+          xAxis: {
+            type: "category",
+            labels: {
+              rotation: -45,
+              style: {
+                fontSize: "13px",
+                fontFamily: "Verdana, sans-serif",
+              },
+            },
+          },
+          yAxis: {
+            min: 0,
+            title: {
+              text: "",
+            },
+          },
+          legend: {
+            enabled: false,
+          },
+          exporting: {
+            enabled: false,
+          },
+          credits: {
+            enabled: false,
+          },
+          series: [
+            {
+              name: "Post Monsoon",
+              data: postmonsoonchartdata,
+              dataLabels: {
+                enabled: true,
+                rotation: -90,
+                color: "#FFFFFF",
+                align: "right",
+                format: "{point.y:.1f}", // one decimal
+                y: 10, // 10 pixels down from the top
+                style: {
+                  fontSize: "13px",
+                  fontFamily: "Verdana, sans-serif",
+                },
+              },
+            },
+          ],
+        });
+      }
+
+      let proj;
+      let overexploited = 0;
+      // let exploited = 0;
+      let critical = 0;
+      let semicritical = 0;
+      let safe = 0;
 
 
-Highcharts.chart('postmonsoon', {
-    chart: {
-        type: 'column'
-    },
-    title: {
-        text: 'Postmonsoon of Taluk ' + premansoontaluk[index]['Tehsil/Block']
-    },
-    xAxis: {
-        type: 'category',
-        labels: {
-            rotation: -45,
-            style: {
-                fontSize: '13px',
-                fontFamily: 'Verdana, sans-serif'
-            }
-        }
-    },
-    yAxis: {
-        min: 0,
-        title: {
-            text: ''
-        }
-    },
-    legend: {
-        enabled: false
-    },
-    exporting: {
-      enabled: false
-    },
-    credits: {
-      enabled: false
-    },
-    series: [{
-        name: 'Post Monsoon',
-        data: postmonsoonchartdata,
-        dataLabels: {
-            enabled: true,
-            rotation: -90,
-            color: '#FFFFFF',
-            align: 'right',
-            format: '{point.y:.1f}', // one decimal
-            y: 10, // 10 pixels down from the top
-            style: {
-                fontSize: '13px',
-                fontFamily: 'Verdana, sans-serif'
-            }
-        }
-    }]
-});
-}
+        var w = 250;
+        var h = 250;
+        proj = d3.geo.mercator();
+        var path = d3.geo.path().projection(proj);
+        var t = proj.translate(); // the projection's default translation
+        var s = proj.scale(); // the projection's default scale
 
-let proj;
-let overexploited = 0;
-let exploited = 0;
-let critical = 0;
-let semicritical = 0;
-let safe = 0;
-function loaddistrictmap() {
-    var w = 250;
-    var h = 250;
-    proj = d3.geo.mercator();
-    var path = d3.geo.path().projection(proj);
-    var t = proj.translate(); // the projection's default translation
-    var s = proj.scale() // the projection's default scale
+        var svg = d3
+          .select("#chart")
+          .append("svg:svg")
+          .attr("id", "mapid")
+          .attr("width", w)
+          .attr("height", h)
+          .call(initialize);
 
-    var svg = d3.select("#chart")
-             .append("svg:svg")
-             .attr("id", "mapid")
-             .attr("width", w)
-        .attr("height", h)
-        .call(initialize);
+        var map = svg.append("svg:g");
+        var india = map.append("svg:g").attr("id", "india");
 
-    var map = svg.append("svg:g")
+      function loaddistrictmap(selectedStage = undefined) {
+        d3.json("full_data-3.json", function (json) {
+          console.log(json);
+          india
+            .selectAll("path")
+            .data(json.features)
+            .enter()
+            .append("path")
+            .attr("d", path)
+            .attr("fill", function (d, i) {
+              if (d.properties.NAME_2 === undefined) return "#fff";
 
+              // console.log(d.properties.NAME_2);
 
-    var india = map.append("svg:g")
-        .attr("id", "india");
+              let districtdata = karnatakadata.find(
+                (a) =>
+                  a["Name of District"].toUpperCase() ===
+                  d.properties.NAME_2.toUpperCase()
+              );
 
-    d3.json("full_data-3.json", function (json) {
-      console.log(json);
-      india.selectAll("path")
-          .data(json.features)
-        .enter().append("path")
-          .attr("d", path)
-          .attr("fill", function(d, i) {
-
-            if(d.properties.NAME_2 === undefined)
-                return "#fff";
-
-                console.log(d.properties.NAME_2);
-
-            let districtdata = karnatakadata.find(a => a['Name of District'].toUpperCase() === d.properties.NAME_2.toUpperCase())
-
-            if(parseInt(districtdata['Stage of Ground Water Distribution (%)']) > 80) {
+              if (
+                parseInt(
+                  districtdata["Stage of Ground Water Distribution (%)"]
+                ) > 100
+              ) {
                 overexploited++;
                 return "rgb(234, 51, 35)";
-            }
-            else if(parseInt(districtdata['Stage of Ground Water Distribution (%)']) > 60) {
-                exploited++;
-                return "rgb(187, 39, 57)";
-            }
-            else if(parseInt(districtdata['Stage of Ground Water Distribution (%)']) > 50) {
+              } else if (
+                parseInt(
+                  districtdata["Stage of Ground Water Distribution (%)"]
+                ) > 90
+              ) {
                 critical++;
                 return "rgb(140, 28, 100)";
-            }
-            else if(parseInt(districtdata['Stage of Ground Water Distribution (%)']) > 40) {
+              } else if (
+                parseInt(
+                  districtdata["Stage of Ground Water Distribution (%)"]
+                ) > 70
+              ) {
                 semicritical++;
                 return "rgb(93, 21, 147)";
-            }
-            else if(parseInt(districtdata['Stage of Ground Water Distribution (%)']) > 30) {
+              } else if (
+                parseInt(
+                  districtdata["Stage of Ground Water Distribution (%)"]
+                ) > 30
+              ) {
                 safe++;
                 return "rgb(44, 20, 196)";
-            }
-            else if(parseInt(districtdata['Stage of Ground Water Distribution (%)']) > 20) {
+              } else if (
+                parseInt(
+                  districtdata["Stage of Ground Water Distribution (%)"]
+                ) > 20
+              ) {
                 safe++;
                 return "rgb(0, 24, 245)";
-            }
-            else {
-              safe++;
-              console.log(districtdata['Stage of Ground Water Distribution (%)']);
-            }
-            return "blue";
-          })
-          .on("mousedown", function (d) {
-            console.log(d.properties.NAME_2.toUpperCase());
-            filterdistrictdata(d.properties.NAME_2.toUpperCase());
-          })
-          .append("title")
-          .text(function(d){
+              } else {
+                safe++;
+                console.log(
+                  districtdata["Stage of Ground Water Distribution (%)"]
+                );
+              }
+              return "blue";
+            })
+            .on("mousedown", function (d) {
+              console.log(d.properties.NAME_2.toUpperCase());
+              selectedDistrict = d.properties.NAME_2.toUpperCase();
+              filterdistrictdata(selectedDistrict);
+            })
+            .append("title")
+            .text(function (d) {
+              if (d.properties.NAME_2 === undefined) return "";
 
-            if(d.properties.NAME_2 === undefined) return "";
+              let districtdata = karnatakadata.find(
+                (a) =>
+                  a["Name of District"].toUpperCase() ===
+                  d.properties.NAME_2.toUpperCase()
+              );
 
-            let districtdata = karnatakadata.find(a => a['Name of District'].toUpperCase() === d.properties.NAME_2.toUpperCase())
+              let stage;
 
-            let stage;
+              if (
+                parseInt(
+                  districtdata["Stage of Ground Water Distribution (%)"]
+                ) > 100
+              )
+                stage = "Over Exploited";
+              else if (
+                parseInt(
+                  districtdata["Stage of Ground Water Distribution (%)"]
+                ) > 90
+              )
+                stage = "Critical";
+              // else if(parseInt(districtdata['Stage of Ground Water Distribution (%)']) > 90)
+              //     stage = "Exploited"
+              else if (
+                parseInt(
+                  districtdata["Stage of Ground Water Distribution (%)"]
+                ) > 70
+              )
+                stage = "Semi Critical";
+              else if (
+                parseInt(
+                  districtdata["Stage of Ground Water Distribution (%)"]
+                ) > 30
+              )
+                stage = "Safe";
+              else if (
+                parseInt(
+                  districtdata["Stage of Ground Water Distribution (%)"]
+                ) > 20
+              )
+                stage = "Safe";
 
-            if(parseInt(districtdata['Stage of Ground Water Distribution (%)']) > 80)
-                stage = "Over Exploited"
-            else if(parseInt(districtdata['Stage of Ground Water Distribution (%)']) > 60)
-                stage = "Exploited"
-            else if(parseInt(districtdata['Stage of Ground Water Distribution (%)']) > 50)
-                stage = "Critical"
-            else if(parseInt(districtdata['Stage of Ground Water Distribution (%)']) > 40)
-                stage = "Semi Critical"
-            else if(parseInt(districtdata['Stage of Ground Water Distribution (%)']) > 30)
-                stage = "Safe"
-            else if(parseInt(districtdata['Stage of Ground Water Distribution (%)']) > 20)
-                stage = "Safe"
-
-
-          	return "District: " + d.properties.NAME_2 +
-                  "\nStage of Ground Water Distribution (%) " +  districtdata['Stage of Ground Water Distribution (%)'] +
-                  "\nStage: " + stage;
-          });
+              return (
+                "District: " +
+                d.properties.NAME_2 +
+                "\nStage of Ground Water Distribution (%) " +
+                districtdata["Stage of Ground Water Distribution (%)"] +
+                "\nStage: " +
+                stage
+              );
+            });
 
           document.getElementById("totalStages").innerHTML = `
-          <tr class="over-exploit"><td>Over Exploited </td><td>${overexploited}</td</tr>
-          <tr class="exploit"><td>Exploited </td><td>${exploited}</td</tr>
-          <tr class="critical"><td>Critical </td><td>${critical}</td</tr>
-          <tr class="semi-critical"><td>Semi Ciritcal </td><td>${semicritical}</td</tr>
-          <tr class="safe"><td>Safe </td><td>${safe}</td</tr>
-          `
-          
-          
+          <div class="stage over-exploited"><h2>Over Exploited</h2><p>${overexploited}</p></div>
+          <div class="stage critical"><h2>Critical</h2><p>${critical}</p></div>
+          <div class="stage semi-critical"><h2>Semi Ciritcal</h2><p>${semicritical}</p></div>
+          <div class="stage safe"><h2>Safe</h2><p>${safe}</p></div>
+          `;
+
           // "Over Exploited " + overexploited +
           // "<br>Exploited " + exploited + "<br>Critical " + critical + "<br>Semi Ciritcal " + semicritical +
           // "<br>Safe " + safe;
 
-          console.log(overexploited, exploited, critical, semicritical, safe);
-    });
-  }
+          // console.log(overexploited, critical, semicritical, safe);
+        });
+      }
 
-    function initialize() {
-      proj.scale(7500);
-      proj.translate([-1440, 475]);
-    }
+      function initialize() {
+        proj.scale(7500);
+        proj.translate([-1440, 475]);
+      }
 
-init();
-
-
-  </script>
-</body>
+      init();
+    </script>
+  </body>
 </html>
