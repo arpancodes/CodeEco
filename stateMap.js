@@ -21,7 +21,11 @@
       var tamilnadudata13 = data2013.filter(element => element['Name of State'] === 'TAMILNADU')
       var keraladata = data2017.filter(element => element['Name of State'] === 'KERALA')
       var keraladata13 = data2013.filter(element => element['Name of State'] === 'KERALA')
+      var goadata = data2017.filter(element => element['Name of State'] === 'GOA')
+      var goadata13 = data2013.filter(element => element['Name of State'] === 'GOA')
 
+      localStorage.setItem("goadata", JSON.stringify(goadata))
+      localStorage.setItem("goadata13", JSON.stringify(goadata13))
       localStorage.setItem("keraladata", JSON.stringify(keraladata))
       localStorage.setItem("keraladata13", JSON.stringify(keraladata13))
       localStorage.setItem("data2017", JSON.stringify(data2017))

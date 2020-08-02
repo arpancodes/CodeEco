@@ -30,7 +30,11 @@ header #brand {
   justify-content: center;
   text-transform: uppercase;
   font-style: oblique;
-  font-size: 0.5rem;
+  font-size: .9rem;
+  width: 100px;
+}
+header #brand h2{
+  width: 200px;
 }
 header a {
   text-decoration: none;
@@ -181,6 +185,7 @@ tr:nth-of-type(2n) td:not(:first-child) {
 
 .center-of-attraction {
   color: #51df70;
+  font-size: 2rem;
 }
 
 #map {
@@ -443,7 +448,7 @@ body > #search-state div {
   border: none;
   background-color: var(--background-second);
   border-radius: 5px;
-  box-shadow: 0 0 10px #00000049;
+  box-shadow: 0 0 10px var(--box-shadow-color);
   color: var(--text-color-dark);
   font-size: 0.9rem;
   font-weight: bold;

@@ -103,6 +103,7 @@
       <div id="chart13" class="district-map map-hide"></div>
 
       <div id="block-chart" style="width: 500px; margin-left: 260px;margin-right: -50px;">
+        <p id="selecteddistrict">Tamil Nadu</p>
         <form
           autocomplete="off"
           id="search-state"
@@ -119,7 +120,6 @@
             />
           </div>
         </form>
-        <p id="selecteddistrict">Select a district from the map!</p>
         <select id="taluks" onChange="onTalukChange()"></select>
         <div id="premonsoon"></div>
         <div id="postmonsoon"></div>
@@ -428,7 +428,7 @@
         deselectTabs();
 
         document.getElementById("selecteddistrict").innerHTML =
-          "Selected District: " + districtname;
+          " " + districtname;
 
         var selectedtaluks = premansoondistricts[districtname];
         premansoontaluk = premansoondistricts[districtname];
