@@ -31,11 +31,19 @@
       </nav>
     </header>
     <!--Make sure the form has the autocomplete function switched off:-->
-<form autocomplete="off" id="search-state" action="">
-  <div class="autocomplete" >
-    <input id="myInput" type="text" name="myCountry" placeholder="Search for a state or a district">
-  </div>
-</form>
+    <form autocomplete="off" id="search-state" action="">
+      <div class="autocomplete">
+        <div class="search-icon">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+        <input
+          id="myInput"
+          type="text"
+          name="myCountry"
+          placeholder="Search for a state or a district"
+        />
+      </div>
+    </form>
     <div id="map-section" class="container">
       <!-- <h1>Hover on the Map to see the details!</h1> -->
       <!-- <div class="stats">
@@ -66,7 +74,7 @@
         </tr>
       </table> -->
 
-    <div style="margin-left: 5px" class="container charts">
+    <div style="margin-left: 5px;" class="container charts">
       <div class="stats">
         <div class="chart" id="groundWaterdonut"></div>
         <div class="chart" id="extractWaterdonut"></div>

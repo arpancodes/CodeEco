@@ -17,6 +17,10 @@
 
     <!--  Styles  -->
     <link type="text/css" rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <style type="text/css">
       #mapid {
         background: transparent;
@@ -89,12 +93,14 @@
         justify-content: center;
         align-items: center;
       }
-      #totalStages , #totalStages13{
+      #totalStages,
+      #totalStages13 {
         display: flex;
         justify-content: center;
         width: 50%;
       }
-      #totalStages .stage, #totalStages13 .stage {
+      #totalStages .stage,
+      #totalStages13 .stage {
         margin: 80px 0px 0;
         width: 17%;
         height: 150px;
@@ -106,37 +112,46 @@
         background-color: transparent;
         cursor: pointer;
         z-index: 100;
-      
       }
-      #totalStages .stage h2,#totalStages13 .stage h2 {
-        font-size: .9rem;
+      #totalStages .stage h2,
+      #totalStages13 .stage h2 {
+        font-size: 0.9rem;
       }
-      #totalStages .stage p,#totalStages13 .stage p {
+      #totalStages .stage p,
+      #totalStages13 .stage p {
         font-size: 2rem;
         font-weight: bold;
       }
-      #totalStages .stage.over-exploited,#totalStages13 .stage.over-exploited {
+      #totalStages .stage.over-exploited,
+      #totalStages13 .stage.over-exploited {
         color: var(--over-exploited);
       }
-      #totalStages .stage.over-exploited:hover,#totalStages13 .stage.over-exploited:hover {
+      #totalStages .stage.over-exploited:hover,
+      #totalStages13 .stage.over-exploited:hover {
         background: var(--over-exploited-hover);
       }
-      #totalStages .stage.critical,#totalStages13 .stage.critical {
+      #totalStages .stage.critical,
+      #totalStages13 .stage.critical {
         color: var(--critical);
       }
-      #totalStages .stage.critical:hover,#totalStages13 .stage.critical:hover {
+      #totalStages .stage.critical:hover,
+      #totalStages13 .stage.critical:hover {
         background: var(--critical-hover);
       }
-      #totalStages .stage.semi-critical,#totalStages13 .stage.semi-critical {
+      #totalStages .stage.semi-critical,
+      #totalStages13 .stage.semi-critical {
         color: var(--semi-critical);
       }
-      #totalStages .stage.semi-critical:hover,#totalStages13 .stage.semi-critical:hover {
+      #totalStages .stage.semi-critical:hover,
+      #totalStages13 .stage.semi-critical:hover {
         background: var(--semi-critical-hover);
       }
-      #totalStages .stage.safe,#totalStages13 .stage.safe {
+      #totalStages .stage.safe,
+      #totalStages13 .stage.safe {
         color: var(--safe);
       }
-      #totalStages .stage.safe:hover,#totalStages13 .stage.safe:hover {
+      #totalStages .stage.safe:hover,
+      #totalStages13 .stage.safe:hover {
         background: var(--safe-hover);
       }
 
@@ -144,32 +159,27 @@
         margin-top: -250px;
       }
 
-      #chart13{
+      #chart13 {
         margin-left: -262px;
       }
       footer {
         width: 100%;
         height: 250px;
       }
-      .map-show{
+      .map-show {
         opacity: 1;
       }
-      .map-hide{
+      .map-hide {
         opacity: 0;
-      } 
-      .year-tabs{
+      }
+      .year-tabs {
         display: flex;
         margin-top: 0;
-        width:50%;
+        width: 50%;
         margin-left: 32px;
         margin-bottom: -100px;
-        
       }
-      .year-tabs h2{
-        font-size: .9rem;
-        margin-top: 85px;
-      }
-      .year-tabs .tab{
+      .year-tabs .tab {
         margin: 80px 3px 0;
         width: 30px;
         height: 30px;
@@ -184,14 +194,15 @@
         background-color: rgba(255, 99, 71, 0.26);
         font-weight: bold;
         color: tomato;
-        font-size: .9rem;
+        font-size: 0.9rem;
       }
-      .year-tabs .tab.selected{ 
+      .year-tabs .tab.selected {
         background-color: tomato;
         color: rgb(82, 9, 9);
       }
-      #arimagraph{margin-top: 10px;}
-      
+      #arimagraph {
+        margin-top: 10px;
+      }
     </style>
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -219,11 +230,10 @@
 
     <div id="totalStages"></div>
     <div id="totalStages13"></div>
-      <div class="year-tabs">
-        <h2>year:</h2>
-        <div id="btn-2017" class="tab selected">17</div>
-        <div id="btn-2013" class="tab">13</div>
-      </div>
+    <div class="year-tabs">
+      <div id="btn-2017" class="tab selected">17</div>
+      <div id="btn-2013" class="tab">13</div>
+    </div>
     <div class="container">
       <div style="color: white;">
         <svg
@@ -270,10 +280,23 @@
       <div id="chart" class="district-map map-show"></div>
       <div id="chart13" class="district-map map-hide"></div>
 
-      <div id="block-chart" style="width: 500px; margin-left: 250px; ">
-        <form autocomplete="off" id="search-state" style="margin-bottom:0; margin-left: 0px; " action="">
-          <div class="autocomplete" >
-            <input id="myInput" type="text" style="width: 370px; margin-right: -180px;" name="myCountry" placeholder="Search for a district">
+      <div id="block-chart" style="width: 500px; margin-left: 250px;">
+        <form
+          autocomplete="off"
+          id="search-state"
+          style="margin-bottom: 0; margin-left: 0px;"
+          action=""
+        >
+          <div class="autocomplete">
+            <div class="search-icon">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </div>
+            <input
+              id="myInput"
+              type="text"
+              name="myCountry"
+              placeholder="Search for a district"
+            />
           </div>
         </form>
         <p id="selecteddistrict">Select a district from the map!</p>
@@ -282,7 +305,7 @@
         <div id="premonsoon"></div>
         <div id="postmonsoon"></div>
         <div id="arimagraph"></div>
-
+        <div id="groundWaterdonut"></div>
       </div>
     </div>
     <div class="stats-table">
@@ -306,121 +329,229 @@
         }, {});
       };
 
-      const allDistricts = []
+      function sortTable(n) {
+        var table,
+          rows,
+          switching,
+          i,
+          x,
+          y,
+          shouldSwitch,
+          dir,
+          switchcount = 0;
+        table = document.querySelector("#district-table table");
+        // console.log(table)
+        switching = true;
+        //Set the sorting direction to ascending:
+        dir = "asc";
+        /*Make a loop that will continue until
+  no switching has been done:*/
+        while (switching) {
+          //start by saying: no switching is done:
+          switching = false;
+          rows = table.rows;
+          /*Loop through all table rows (except the
+    first, which contains table headers):*/
+          for (i = 1; i < rows.length - 1; i++) {
+            //start by saying there should be no switching:
+            shouldSwitch = false;
+            /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+            x = rows[i].getElementsByTagName("TD")[n];
+            y = rows[i + 1].getElementsByTagName("TD")[n];
+            /*check if the two rows should switch place,
+      based on the direction, asc or desc:*/
+            if (dir == "asc") {
+              // if(columnName === "Status"){
+              //   console.log('X:',x,'Y:', y);
+              // }
+              if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                //if so, mark as a switch and break the loop:
+                shouldSwitch = true;
+                break;
+              }
+            } else if (dir == "desc") {
+              if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                //if so, mark as a switch and break the loop:
+                shouldSwitch = true;
+                break;
+              }
+            }
+          }
+          if (shouldSwitch) {
+            /*If a switch has been marked, maStatuske the switch
+      and mark that a switch has been done:*/
+            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+            switching = true;
+            //Each time a switch is done, increase this count by 1:
+            switchcount++;
+          } else {
+            /*If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again.*/
+            if (switchcount == 0 && dir == "asc") {
+              dir = "desc";
+              switching = true;
+            }
+          }
+        }
+      }
 
-autocomplete(document.getElementById("myInput"), allDistricts);
+      const allDistricts = [
+        "Uttar Kannand",
+        "Bagalkot",
+        "Bangalore Rural",
+        "Bangalore Urban",
+        "Belgaum",
+        "Bellary",
+        "Bidar",
+        "Bijapur",
+        "Chamrajnagar",
+        "Chikmagalur",
+        "Chitradurga",
+        "Dakshin Kannad",
+        "Davanagere",
+        "Dharwad",
+        "Gadag",
+        "Gulbarga",
+        "Hassan",
+        "Haveri",
+        "Kodagu",
+        "Kolar",
+        "Koppal",
+        "Mandya",
+        "Mysore",
+        "Raichur",
+        "Shimoga",
+        "Tumkur",
+        "Udupi",
+      ];
 
- function autocomplete(inp, arr) {
-  /*the autocomplete function takes two arguments,
+      autocomplete(document.getElementById("myInput"), allDistricts);
+
+      function autocomplete(inp, arr) {
+        /*the autocomplete function takes two arguments,
   the text field element and an array of possible autocompleted values:*/
-  var currentFocus;
-  /*execute a function when someone writes in the text field:*/
-  inp.addEventListener("input", function(e) {
-      var a, b, i, val = this.value;
-      /*close any already open lists of autocompleted values*/
-      closeAllLists();
-      if (!val) { return false;}
-      currentFocus = -1;
-      /*create a DIV element that will contain the items (values):*/
-      a = document.createElement("DIV");
-      a.setAttribute("id", this.id + "autocomplete-list");
-      a.setAttribute("class", "autocomplete-items");
-      /*append the DIV element as a child of the autocomplete container:*/
-      this.parentNode.appendChild(a);
-      /*for each item in the array...*/
-      for (i = 0; i < arr.length; i++) {
-        /*check if the item starts with the same letters as the text field value:*/
-        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
-          /*create a DIV element for each matching element:*/
-          b = document.createElement("DIV");
-          /*make the matching letters bold:*/
-          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
-          b.innerHTML += arr[i].substr(val.length);
-          /*insert a input field that will hold the current array item's value:*/
-          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-          /*execute a function when someone clicks on the item value (DIV element):*/
-              b.addEventListener("click", function(e) {
-              /*insert the value for the autocomplete text field:*/
-              selectedDistrict = b.textContent.toUpperCase();
-              filterdistrictdata(selectedDistrict, statusFilter);
-              // window.location = `./${url}.html`
-              inp.value = this.getElementsByTagName("input")[0].value;
-              /*close the list of autocompleted values,
+        var currentFocus;
+        /*execute a function when someone writes in the text field:*/
+        inp.addEventListener("input", function (e) {
+          var a,
+            b,
+            i,
+            val = this.value;
+          /*close any already open lists of autocompleted values*/
+          closeAllLists();
+          if (!val) {
+            return false;
+          }
+          currentFocus = -1;
+          /*create a DIV element that will contain the items (values):*/
+          a = document.createElement("DIV");
+          a.setAttribute("id", this.id + "autocomplete-list");
+          a.setAttribute("class", "autocomplete-items");
+          /*append the DIV element as a child of the autocomplete container:*/
+          this.parentNode.appendChild(a);
+          /*for each item in the array...*/
+          for (i = 0; i < arr.length; i++) {
+            /*check if the item starts with the same letters as the text field value:*/
+            if (
+              arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()
+            ) {
+              /*create a DIV element for each matching element:*/
+              b = document.createElement("DIV");
+              /*make the matching letters bold:*/
+              b.innerHTML =
+                "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+              b.innerHTML += arr[i].substr(val.length);
+              /*insert a input field that will hold the current array item's value:*/
+              b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+              /*execute a function when someone clicks on the item value (DIV element):*/
+              b.addEventListener("click", function (e) {
+                /*insert the value for the autocomplete text field:*/
+                selectedDistrict = b.textContent.toUpperCase();
+                filterdistrictdata(selectedDistrict, statusFilter);
+                // window.location = `./${url}.html`
+                inp.value = this.getElementsByTagName("input")[0].value;
+                /*close the list of autocompleted values,
               (or any other open lists of autocompleted values:*/
-              closeAllLists();
-          });
-          a.appendChild(b);
-        }
-      }
-  });
-  /*execute a function presses a key on the keyboard:*/
-  inp.addEventListener("keydown", function(e) {
-      var x = document.getElementById(this.id + "autocomplete-list");
-      if (x) x = x.getElementsByTagName("div");
-      if (e.keyCode == 40) {
-        /*If the arrow DOWN key is pressed,
+                closeAllLists();
+              });
+              a.appendChild(b);
+            }
+          }
+        });
+        /*execute a function presses a key on the keyboard:*/
+        inp.addEventListener("keydown", function (e) {
+          var x = document.getElementById(this.id + "autocomplete-list");
+          if (x) x = x.getElementsByTagName("div");
+          if (e.keyCode == 40) {
+            /*If the arrow DOWN key is pressed,
         increase the currentFocus variable:*/
-        currentFocus++;
-        /*and and make the current item more visible:*/
-        addActive(x);
-      } else if (e.keyCode == 38) { //up
-        /*If the arrow UP key is pressed,
+            currentFocus++;
+            /*and and make the current item more visible:*/
+            addActive(x);
+          } else if (e.keyCode == 38) {
+            //up
+            /*If the arrow UP key is pressed,
         decrease the currentFocus variable:*/
-        currentFocus--;
-        /*and and make the current item more visible:*/
-        addActive(x);
-      } else if (e.keyCode == 13) {
-        /*If the ENTER key is pressed, prevent the form from being submitted,*/
-        e.preventDefault();
-        if (currentFocus > -1) {
-          /*and simulate a click on the "active" item:*/
-          if (x) x[currentFocus].click();
+            currentFocus--;
+            /*and and make the current item more visible:*/
+            addActive(x);
+          } else if (e.keyCode == 13) {
+            /*If the ENTER key is pressed, prevent the form from being submitted,*/
+            e.preventDefault();
+            if (currentFocus > -1) {
+              /*and simulate a click on the "active" item:*/
+              if (x) x[currentFocus].click();
+            }
+          }
+        });
+        function addActive(x) {
+          /*a function to classify an item as "active":*/
+          if (!x) return false;
+          /*start by removing the "active" class on all items:*/
+          removeActive(x);
+          if (currentFocus >= x.length) currentFocus = 0;
+          if (currentFocus < 0) currentFocus = x.length - 1;
+          /*add class "autocomplete-active":*/
+          x[currentFocus].classList.add("autocomplete-active");
         }
-      }
-  });
-  function addActive(x) {
-    /*a function to classify an item as "active":*/
-    if (!x) return false;
-    /*start by removing the "active" class on all items:*/
-    removeActive(x);
-    if (currentFocus >= x.length) currentFocus = 0;
-    if (currentFocus < 0) currentFocus = (x.length - 1);
-    /*add class "autocomplete-active":*/
-    x[currentFocus].classList.add("autocomplete-active");
-  }
-  function removeActive(x) {
-    /*a function to remove the "active" class from all autocomplete items:*/
-    for (var i = 0; i < x.length; i++) {
-      x[i].classList.remove("autocomplete-active");
-    }
-  }
-  function closeAllLists(elmnt) {
-    /*close all autocomplete lists in the document,
+        function removeActive(x) {
+          /*a function to remove the "active" class from all autocomplete items:*/
+          for (var i = 0; i < x.length; i++) {
+            x[i].classList.remove("autocomplete-active");
+          }
+        }
+        function closeAllLists(elmnt) {
+          /*close all autocomplete lists in the document,
     except the one passed as an argument:*/
-    var x = document.getElementsByClassName("autocomplete-items");
-    for (var i = 0; i < x.length; i++) {
-      if (elmnt != x[i] && elmnt != inp) {
-      x[i].parentNode.removeChild(x[i]);
-    }
-  }
-}
-/*execute a function when someone clicks in the document:*/
-document.addEventListener("click", function (e) {
-    closeAllLists(e.target);
-});
-} 
+          var x = document.getElementsByClassName("autocomplete-items");
+          for (var i = 0; i < x.length; i++) {
+            if (elmnt != x[i] && elmnt != inp) {
+              x[i].parentNode.removeChild(x[i]);
+            }
+          }
+        }
+        /*execute a function when someone clicks in the document:*/
+        document.addEventListener("click", function (e) {
+          closeAllLists(e.target);
+        });
+      }
 
       let karnatakadata = JSON.parse(localStorage.getItem("karnatakadata"));
       let karnatakadata13 = JSON.parse(localStorage.getItem("karnatakadata13"));
       let premonsoondata = JSON.parse(localStorage.getItem("premonsoon"));
       let postmonsoondata = JSON.parse(localStorage.getItem("postmonsoon"));
+      let data2017 = JSON.parse(localStorage.getItem("data2017"));
+      let data2013 = JSON.parse(localStorage.getItem("data2013"));
 
       let premansoondistricts = groupBy(premonsoondata, "District");
       let postmonsoondistricts = groupBy(postmonsoondata, "District");
+      let data2017districts = groupBy(data2017, "Name of District");
+      let data2013districts = groupBy(data2013, "Name of District");
 
       console.log(premansoondistricts);
 
-      console.log(karnatakadata13)
+      console.log(karnatakadata13);
 
       function init() {
         loaddistrictmap("#chart", karnatakadata, "totalStages");
@@ -432,32 +563,32 @@ document.addEventListener("click", function (e) {
       let selectedDistrict;
       let statusFilter;
 
-      const btn2017 = document.querySelector('#btn-2017');
-      const btn2013 = document.querySelector('#btn-2013');
+      const btn2017 = document.querySelector("#btn-2017");
+      const btn2013 = document.querySelector("#btn-2013");
 
-      function selectYear17(){
-        btn2017.classList.add('selected')
-        btn2013.classList.remove('selected')
-        document.querySelector('#chart13').classList.add('map-hide');
-        document.querySelector('#chart').classList.remove('map-hide');
-        document.querySelector('#chart').classList.add('map-show');
-        document.querySelector('#totalStages13').style.display = 'none';
-        document.querySelector('#totalStages').style.display = 'flex';
+      function selectYear17() {
+        btn2017.classList.add("selected");
+        btn2013.classList.remove("selected");
+        document.querySelector("#chart13").classList.add("map-hide");
+        document.querySelector("#chart").classList.remove("map-hide");
+        document.querySelector("#chart").classList.add("map-show");
+        document.querySelector("#totalStages13").style.display = "none";
+        document.querySelector("#totalStages").style.display = "flex";
       }
 
-      function selectYear13(){
-        btn2017.classList.remove('selected')
-        btn2013.classList.add('selected')
-        document.querySelector('#chart').classList.add('map-hide');
-        document.querySelector('#chart13').classList.remove('map-hide');
-        document.querySelector('#chart13').classList.add('map-show');
-        document.querySelector('#totalStages13').style.display = 'flex';
-        document.querySelector('#totalStages').style.display = 'none';
+      function selectYear13() {
+        btn2017.classList.remove("selected");
+        btn2013.classList.add("selected");
+        document.querySelector("#chart").classList.add("map-hide");
+        document.querySelector("#chart13").classList.remove("map-hide");
+        document.querySelector("#chart13").classList.add("map-show");
+        document.querySelector("#totalStages13").style.display = "flex";
+        document.querySelector("#totalStages").style.display = "none";
       }
-      selectYear17()
-      btn2017.addEventListener('click', selectYear17)
-      btn2013.addEventListener('click', selectYear13)
-      
+      selectYear17();
+      btn2017.addEventListener("click", selectYear17);
+      btn2013.addEventListener("click", selectYear13);
+
       // const stagesTabs = document.querySelectorAll()
 
       const statusTabs = document.querySelectorAll("#status-tabs .tab");
@@ -473,6 +604,16 @@ document.addEventListener("click", function (e) {
           tab.classList.add("selected");
         })
       );
+
+
+      function titleCase(str) {
+  str = str.toLowerCase().split(' ');
+  for (var i = 0; i < str.length; i++) {
+    str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
+  }
+  return str.join(' ');
+}
+
 
       function filterdistrictdata(districtname, statusFilter = undefined) {
         deselectTabs();
@@ -504,7 +645,9 @@ document.addEventListener("click", function (e) {
           $(tableData).each(function (i, rowData) {
             var row = $("<tr></tr>");
             $(rowData).each(function (j, cellData) {
-              if (j === 3 && i != 0) {
+              if (i === 0) {
+                row.append($(`<td onclick="sortTable(${j})">${cellData}</td>`));
+              } else if (j === 3 && i != 0) {
                 cellData.toUpperCase() === "Upward Trend".toUpperCase()
                   ? row.append($("<td class='up-trend'>" + cellData + "</td>"))
                   : row.append(
@@ -519,7 +662,7 @@ document.addEventListener("click", function (e) {
 
         $.ajax({
           type: "GET",
-          url: "./district.csv",
+          url: "./karnataka.csv",
           success: function (data) {
             const dataArr = Papa.parse(data).data;
             let filteredData = dataArr.filter((dist, i) => {
@@ -566,6 +709,12 @@ document.addEventListener("click", function (e) {
 
         let premonsoonchartdata = [];
         let postmonsoonchartdata = [];
+        let groundWater2017 = 0;
+        let groundWater2013 = 0;
+        let extractWater2017 = 0;
+        let extractWater2013 = 0;
+        let extractPercent2017 = 0;
+        let extractPercent2013 = 0;
         for (var i = 0; i < preyearkeys.length; i++) {
           var predatum = [];
           var postdatum = [];
@@ -577,9 +726,23 @@ document.addEventListener("click", function (e) {
           premonsoonchartdata.push(predatum);
           postmonsoonchartdata.push(postdatum);
         }
+        console.log(data2017districts)
+        console.log(data2013districts)
+        console.log(data2017districts[titleCase(selectedDistrict)])
+        console.log(selectedDistrict)
+        groundWater2017 = data2017districts[titleCase(selectedDistrict)][0]["Total Annual Ground Water Recharge(Ham)"]
+        extractWater2017 = data2017districts[titleCase(selectedDistrict)][0]["Total Current Annual Ground Water Extraction(Ham)"]
+        extractPercent2017 =
+          data2017districts[titleCase(selectedDistrict)][0]["Stage of Ground Water Distribution (%)"]
+
+        groundWater2013 = data2013districts[titleCase(selectedDistrict)][0]["Total Annual Ground Water Recharge(Ham)"]
+        extractWater2013 = data2013districts[titleCase(selectedDistrict)][0]["Total Current Annual Ground Water Extraction(Ham)"]
+        extractPercent2013 =
+          data2013districts[titleCase(selectedDistrict)][0]["Stage of Ground Water Distribution (%)"]
 
         console.log(premonsoonchartdata);
         console.log(postmonsoonchartdata);
+
 
         Highcharts.chart("premonsoon", {
           chart: {
@@ -686,65 +849,84 @@ document.addEventListener("click", function (e) {
             },
           ],
         });
-        Highcharts.chart('arimagraph', {
-    chart: {
-        type: 'spline'
-    },
-    title: {
-        text: 'Pre & Post Monsoon Arima Graph'
-    },
-    // subtitle: {
-    //     text: 'Source: WorldClimate.com'
-    // },
-    xAxis: {
-        categories: [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017]
-    },
-    yAxis: {
-        title: {
-            text: 'in meters'
-        },
-        labels: {
-            formatter: function () {
-                return this.value ;
-            }
-        }
-    },
-    tooltip: {
-        crosshairs: true,
-        shared: true
-    },
-    plotOptions: {
-        spline: {
-            marker: {
+        Highcharts.chart("arimagraph", {
+          chart: {
+            type: "spline",
+          },
+          title: {
+            text: "Pre & Post Monsoon Arima Graph",
+          },
+          // subtitle: {
+          //     text: 'Source: WorldClimate.com'
+          // },
+          xAxis: {
+            categories: [
+              2000,
+              2001,
+              2002,
+              2003,
+              2004,
+              2005,
+              2006,
+              2007,
+              2008,
+              2009,
+              2010,
+              2011,
+              2012,
+              2013,
+              2014,
+              2015,
+              2016,
+              2017,
+            ],
+          },
+          yAxis: {
+            title: {
+              text: "in meters",
+            },
+            labels: {
+              formatter: function () {
+                return this.value;
+              },
+            },
+          },
+          tooltip: {
+            crosshairs: true,
+            shared: true,
+          },
+          plotOptions: {
+            spline: {
+              marker: {
                 radius: 4,
-                lineColor: '#666666',
-                lineWidth: 1
-            }
-        }
-    },
-    series: [{
-        name: 'Pre Monsoon',
-        marker: {
-            symbol: 'square'
-        },
-        data: premonsoonchartdata
+                lineColor: "#666666",
+                lineWidth: 1,
+              },
+            },
+          },
+          series: [
+            {
+              name: "Pre Monsoon",
+              marker: {
+                symbol: "square",
+              },
+              data: premonsoonchartdata,
+            },
+            {
+              name: "Post Monsoon",
+              marker: {
+                symbol: "diamond",
+              },
+              data: postmonsoonchartdata,
+            },
+          ],
+        });
 
-    }, {
-        name: 'Post Monsoon',
-        marker: {
-            symbol: 'diamond'
-        },
-        data: postmonsoonchartdata
-    }]
-});
       }
 
       let proj;
-      
-      
-      
-      
-      function loaddistrictmap(id,data,stageId) {
+
+      function loaddistrictmap(id, data, stageId) {
         let overexploited = 0;
         // let exploited = 0;
         let critical = 0;
@@ -756,7 +938,7 @@ document.addEventListener("click", function (e) {
         var path = d3.geo.path().projection(proj);
         var t = proj.translate(); // the projection's default translation
         var s = proj.scale(); // the projection's default scale
-  
+
         var svg = d3
           .select(id)
           .append("svg:svg")
@@ -764,7 +946,7 @@ document.addEventListener("click", function (e) {
           .attr("width", w)
           .attr("height", h)
           .call(initialize);
-  
+
         var map = svg.append("svg:g");
         var india = map.append("svg:g").attr("id", "india");
         d3.json("full_data-3.json", function (json) {
@@ -779,8 +961,7 @@ document.addEventListener("click", function (e) {
               if (d.properties.NAME_2 === undefined) return "#fff";
 
               // console.log(d.properties.NAME_2);
-              allDistricts.push(d.properties.NAME_2.toUpperCase());
-
+              // allDistricts.push(d.properties.NAME_2.toUpperCase());
 
               let districtdata = data.find(
                 (a) =>
@@ -809,7 +990,7 @@ document.addEventListener("click", function (e) {
               ) {
                 semicritical++;
                 return "rgb(93, 21, 147)";
-              }  else {
+              } else {
                 safe++;
                 console.log(
                   districtdata["Stage of Ground Water Distribution (%)"]

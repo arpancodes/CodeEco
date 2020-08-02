@@ -1,4 +1,4 @@
-:root{
+:root {
   --dark-blue: #161625;
   --light-blue: #1e1e30;
   --table-color: #1d1d2f;
@@ -353,19 +353,14 @@ tr:nth-of-type(2n) td:not(:first-child) {
   /* border: 2px solid; */
 }
 
-
-.up-trend{
+.up-trend {
   color: green;
 }
-.down-trend{
+.down-trend {
   color: #e34138;
 }
 
-
-
-
 /* AUTO COMPLETE BOX */
-
 
 .autocomplete {
   /*the container must be positioned relative:*/
@@ -378,11 +373,11 @@ input {
   padding: 10px;
   font-size: 16px;
 }
-input[type=text] {
+input[type="text"] {
   background-color: #f1f1f1;
   width: 100%;
 }
-input[type=submit] {
+input[type="submit"] {
   background-color: DodgerBlue;
   color: #fff;
 }
@@ -398,7 +393,7 @@ input[type=submit] {
   right: 0;
 }
 .autocomplete-items div {
-  width:98% !important;
+  width: 108% !important;
   padding: 10px;
   cursor: pointer;
   background-color: var(--light-blue);
@@ -413,8 +408,9 @@ input[type=submit] {
   background-color: DodgerBlue !important;
   color: #ffffff;
 }
+#search-state{z-index: 900 !important;}
 
-#search-state{
+body > #search-state {
   display: flex;
   justify-content: flex-end;
   margin-top: 150px;
@@ -423,17 +419,49 @@ input[type=submit] {
   margin-right: 220px;
 }
 
-#search-state div{
+body > #search-state div {
   width: 400px;
 }
 
-#search-state div input{
-  padding: 20px; 
+#block-chart{overflow-x: hidden; width: 50%; padding: 0 20px}
+
+#block-chart #search-state {
+  display: flex;
+  justify-content: center;
+  width: 168%;
+  transform: scale(.999);
+  padding: 0px;
+}
+
+#block-chart .autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+  margin-right: 400px;
+  margin-bottom: 50px;
+  width: 440px;
+}
+.autocomplete .search-icon{
+  /* border: 1px solid; */
+  position: absolute;
+  top:50%;
+  left: 10px;
+  font-size: 1.1rem;
+  color: #606771;
+  transform: translateY(-55%);
+  width:20px !important;
+
+}
+
+#search-state div input {
+  padding: 20px;
   border: none;
   background-color: var(--light-blue);
   border-radius: 5px;
   box-shadow: 0 0 10px #00000049;
   color: #606771;
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: bold;
+  outline: none;
+  padding-left: 35px;
 }

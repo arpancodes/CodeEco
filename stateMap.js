@@ -20,6 +20,8 @@
       var tamilnadudata = data2017.filter(element => element['Name of State'] === 'TAMILNADU')
       var tamilnadudata13 = data2013.filter(element => element['Name of State'] === 'TAMILNADU')
 
+      localStorage.setItem("data2017", JSON.stringify(data2017))
+      localStorage.setItem("data2013", JSON.stringify(data2013))
       localStorage.setItem("tamilnadudata13", JSON.stringify(tamilnadudata13))
       localStorage.setItem("karnatakadata13", JSON.stringify(karnatakadata13))
       localStorage.setItem("tamilnadudata", JSON.stringify(tamilnadudata))
@@ -226,8 +228,8 @@ function extractPercentChart(
       {
         name: "Browsers",
         data: [
-          ["2013", groundWater2013],
-          ["2017", groundWater2017],
+          ["2013", extractPercent2013],
+          ["2017", extractPercent2017],
         ],
         size: "100%",
         innerSize: "60%",
@@ -291,7 +293,8 @@ function stateMap(states) {
         })
         .attr("d", path)
         .on("mousedown", function (d) {
-          window.location = "/karnataka.html"
+          const url = d.properties.name.toLowerCase().split(' ').join('-');
+          window.location = `/${url}.html`
           //alert(d.properties.name);
           console.log(d);
         })
