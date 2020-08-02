@@ -16,7 +16,13 @@
       if (error) throw error;
 
       var karnatakadata = data2017.filter(element => element['Name of State'] === 'KARNATAKA')
+      var karnatakadata13 = data2013.filter(element => element['Name of State'] === 'KARNATAKA')
+      var tamilnadudata = data2017.filter(element => element['Name of State'] === 'TAMILNADU')
+      var tamilnadudata13 = data2013.filter(element => element['Name of State'] === 'TAMILNADU')
 
+      localStorage.setItem("tamilnadudata13", JSON.stringify(tamilnadudata13))
+      localStorage.setItem("karnatakadata13", JSON.stringify(karnatakadata13))
+      localStorage.setItem("tamilnadudata", JSON.stringify(tamilnadudata))
       localStorage.setItem("karnatakadata", JSON.stringify(karnatakadata))
       localStorage.setItem("postmonsoon", JSON.stringify(postmonsoon));
       localStorage.setItem("premonsoon", JSON.stringify(premonsoon));
@@ -26,6 +32,7 @@
       var states = topojson.feature(
         topoMap,
         topoMap.objects.ne_10m_admin_1_India_Official
+        // topoMap.objects.india
       );
 
       // Map render
@@ -284,7 +291,7 @@ function stateMap(states) {
         })
         .attr("d", path)
         .on("mousedown", function (d) {
-          window.open("/districts.html");
+          window.location = "/karnataka.html"
           //alert(d.properties.name);
           console.log(d);
         })
