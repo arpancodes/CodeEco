@@ -19,7 +19,11 @@
       var karnatakadata13 = data2013.filter(element => element['Name of State'] === 'KARNATAKA')
       var tamilnadudata = data2017.filter(element => element['Name of State'] === 'TAMILNADU')
       var tamilnadudata13 = data2013.filter(element => element['Name of State'] === 'TAMILNADU')
+      var keraladata = data2017.filter(element => element['Name of State'] === 'KERALA')
+      var keraladata13 = data2013.filter(element => element['Name of State'] === 'KERALA')
 
+      localStorage.setItem("keraladata", JSON.stringify(keraladata))
+      localStorage.setItem("keraladata13", JSON.stringify(keraladata13))
       localStorage.setItem("data2017", JSON.stringify(data2017))
       localStorage.setItem("data2013", JSON.stringify(data2013))
       localStorage.setItem("tamilnadudata13", JSON.stringify(tamilnadudata13))

@@ -1,0 +1,17 @@
+:root {
+    --background-main: #ffffff;
+    --background-second: #d4d4d4;
+    --text-color: #4e4e4e;
+    --table-color: #c4c4c4;
+    --text-color-dark: #646464;
+    --table-color-hover: #1d1d2f2d;
+    --over-exploited: rgb(234, 51, 35);
+    --over-exploited-hover: rgba(234, 52, 35, 0.2);
+    --critical: rgb(140, 28, 100);
+    --critical-hover: rgba(140, 28, 101, 0.2);
+    --semi-critical: rgb(93, 21, 147);
+    --semi-critical-hover: rgba(92, 21, 147, 0.2);
+    --safe: rgb(44, 20, 196);
+    --safe-hover: rgba(43, 20, 196, 0.2);
+  }
+  

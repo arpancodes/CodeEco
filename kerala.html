@@ -2,15 +2,13 @@
 <html lang="en">
   <head>
     <!-- India State Map  -->
-    <title>Tamin Nadu</title>
+    <title>kerala</title>
 
     <!--  Scripts  -->
 
     <script type="text/javascript" src="d3.min.js"></script>
     <script type="text/javascript" src="d3.geo.min.js"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/highcharts-3d.js"></script>
-    <script src="https://code.highcharts.com/modules/cylinder.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
@@ -23,10 +21,9 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="./districts.css">
+    <link rel="stylesheet" href="./districts.css" />
     <link rel="stylesheet" href="styles.css" />
-    <link id="theme-style" rel="stylesheet" href="light-theme.css">
-
+    <link id="theme-style" rel="stylesheet" href="dark-theme.css" />
   </head>
 
   <body>
@@ -45,7 +42,7 @@
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">About Us</a></li>
-          <li><a class="cta" href="/karnataka.html">Analyse</a></li>
+          <li><a class="cta" href="/kerala.html">Analyse</a></li>
         </ul>
       </nav>
     </header>
@@ -102,7 +99,7 @@
       <div id="chart" class="district-map map-show"></div>
       <div id="chart13" class="district-map map-hide"></div>
 
-      <div id="block-chart" style="width: 500px; margin-left: 260px;margin-right: -50px;">
+      <div id="block-chart" style="width: 500px; margin-left: 250px;">
         <form
           autocomplete="off"
           id="search-state"
@@ -110,7 +107,9 @@
           action=""
         >
           <div class="autocomplete">
-            <div class="search-icon"><i class="fa fa-search" aria-hidden="true"></i></div>
+            <div class="search-icon">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </div>
             <input
               id="myInput"
               type="text"
@@ -120,10 +119,12 @@
           </div>
         </form>
         <p id="selecteddistrict">Select a district from the map!</p>
-        <select id="taluks" onChange="onTalukChange()"></select>
+        <select id="taluks" onChange="onTalukChange()"> </select>
+
         <div id="premonsoon"></div>
         <div id="postmonsoon"></div>
         <div id="arimagraph"></div>
+        <div id="groundWaterdonut"></div>
       </div>
     </div>
     <div class="stats-table">
@@ -146,8 +147,6 @@
           return rv;
         }, {});
       };
-
-
 
       function sortTable(n) {
         var table,
@@ -216,38 +215,21 @@
         }
       }
 
-
       const allDistricts = [
-        "Thoothukudi",
-        "Trichy",
-        "Tirunelveli",
-        "Tiruvannamalai",
-        "Vellore",
-        "Villupuram",
-        "Viruthunagar",
-        "Ariyalur",
-        "Chennai",
-        "Coimbatore",
-        "Cuddalore",
-        "Dharmapuri",
-        "Dindigul",
-        "Erode",
-        "Kancheepuram",
-        "Kanyakumari",
-        "Karur",
-        "Madurai",
-        "Nagapattinam",
-        "Namakkal",
-        "Nilgiris",
-        "Peramabalur",
-        "Pudukottai",
-        "Ramanathapuram",
-        "Salem",
-        "Sivagangai",
-        "Thanjavur",
-        "Theni",
-        "Thiruvallur",
-        "Tiruvarur",
+        "ALAPPUZHA",
+        "ERNAKULAM",
+        "IDUKKI",
+        "KANNUR",
+        "KASARGOD",
+        "KOLLAM",
+        "KOTTAYAM",
+        "KOZHIKODE",
+        "MALAPPURAM",
+        "PALAKKAD",
+        "PATHANAMTHITTA",
+        "THIRUVANANTHAPURAM",
+        "THRISSUR",
+        "WAYANAD",
       ];
 
       autocomplete(document.getElementById("myInput"), allDistricts);
@@ -292,7 +274,6 @@
               b.addEventListener("click", function (e) {
                 /*insert the value for the autocomplete text field:*/
                 selectedDistrict = b.textContent.toUpperCase();
-                console.log(selectedDistrict);
                 filterdistrictdata(selectedDistrict, statusFilter);
                 // window.location = `./${url}.html`
                 inp.value = this.getElementsByTagName("input")[0].value;
@@ -362,19 +343,26 @@
         });
       }
 
-      let tamilnadudata = JSON.parse(localStorage.getItem("tamilnadudata"));
-      let tamilnadudata13 = JSON.parse(localStorage.getItem("tamilnadudata13"));
+      let keraladata = JSON.parse(localStorage.getItem("keraladata"));
+      let keraladata13 = JSON.parse(localStorage.getItem("keraladata13"));
       let premonsoondata = JSON.parse(localStorage.getItem("premonsoon"));
       let postmonsoondata = JSON.parse(localStorage.getItem("postmonsoon"));
+      let data2017 = JSON.parse(localStorage.getItem("data2017"));
+      let data2013 = JSON.parse(localStorage.getItem("data2013"));
 
       let premansoondistricts = groupBy(premonsoondata, "District");
       let postmonsoondistricts = groupBy(postmonsoondata, "District");
+      let data2017districts = groupBy(data2017, "Name of District");
+      let data2013districts = groupBy(data2013, "Name of District");
 
       console.log(premansoondistricts);
 
+      console.log(keraladata);
+      console.log(keraladata13);
+
       function init() {
-        loaddistrictmap("#chart", tamilnadudata, "totalStages");
-        loaddistrictmap("#chart13", tamilnadudata13, "totalStages13");
+        loaddistrictmap("#chart", keraladata, "totalStages");
+        loaddistrictmap("#chart13", keraladata13, "totalStages13");
       }
 
       let premansoontaluk;
@@ -424,6 +412,14 @@
         })
       );
 
+      function titleCase(str) {
+        str = str.toLowerCase().split(" ");
+        for (var i = 0; i < str.length; i++) {
+          str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+        }
+        return str.join(" ");
+      }
+
       function filterdistrictdata(districtname, statusFilter = undefined) {
         deselectTabs();
 
@@ -471,7 +467,7 @@
 
         $.ajax({
           type: "GET",
-          url: "./tamilnadu.csv",
+          url: "./kerala.csv",
           success: function (data) {
             const dataArr = Papa.parse(data).data;
             let filteredData = dataArr.filter((dist, i) => {
@@ -518,6 +514,12 @@
 
         let premonsoonchartdata = [];
         let postmonsoonchartdata = [];
+        let groundWater2017 = 0;
+        let groundWater2013 = 0;
+        let extractWater2017 = 0;
+        let extractWater2013 = 0;
+        let extractPercent2017 = 0;
+        let extractPercent2013 = 0;
         for (var i = 0; i < preyearkeys.length; i++) {
           var predatum = [];
           var postdatum = [];
@@ -529,6 +531,35 @@
           premonsoonchartdata.push(predatum);
           postmonsoonchartdata.push(postdatum);
         }
+        console.log(data2017districts);
+        console.log(data2013districts);
+        console.log(data2017districts[titleCase(selectedDistrict)]);
+        console.log(selectedDistrict);
+        groundWater2017 =
+          data2017districts[titleCase(selectedDistrict)][0][
+            "Total Annual Ground Water Recharge(Ham)"
+          ];
+        extractWater2017 =
+          data2017districts[titleCase(selectedDistrict)][0][
+            "Total Current Annual Ground Water Extraction(Ham)"
+          ];
+        extractPercent2017 =
+          data2017districts[titleCase(selectedDistrict)][0][
+            "Stage of Ground Water Distribution (%)"
+          ];
+
+        groundWater2013 =
+          data2013districts[titleCase(selectedDistrict)][0][
+            "Total Annual Ground Water Recharge(Ham)"
+          ];
+        extractWater2013 =
+          data2013districts[titleCase(selectedDistrict)][0][
+            "Total Current Annual Ground Water Extraction(Ham)"
+          ];
+        extractPercent2013 =
+          data2013districts[titleCase(selectedDistrict)][0][
+            "Stage of Ground Water Distribution (%)"
+          ];
 
         console.log(premonsoonchartdata);
         console.log(postmonsoonchartdata);
@@ -536,13 +567,6 @@
         Highcharts.chart("premonsoon", {
           chart: {
             type: "column",
-            options3d: {
-              enabled: true,
-              alpha: 15,
-              beta: 15,
-              depth: 50,
-              viewDistance: 25,
-            },
           },
           title: {
             text:
@@ -561,7 +585,7 @@
           yAxis: {
             min: 0,
             title: {
-              text: "in meters",
+              text: "",
             },
           },
           legend: {
@@ -572,11 +596,6 @@
           },
           credits: {
             enabled: false,
-          },
-          plotOptions: {
-            column: {
-              depth: 25,
-            },
           },
           series: [
             {
@@ -601,13 +620,6 @@
         Highcharts.chart("postmonsoon", {
           chart: {
             type: "column",
-            options3d: {
-              enabled: true,
-              alpha: 15,
-              beta: 15,
-              depth: 50,
-              viewDistance: 25,
-            },
           },
           title: {
             text:
@@ -626,7 +638,7 @@
           yAxis: {
             min: 0,
             title: {
-              text: "in meters",
+              text: "",
             },
           },
           legend: {
@@ -637,11 +649,6 @@
           },
           credits: {
             enabled: false,
-          },
-          plotOptions: {
-            column: {
-              depth: 25,
-            },
           },
           series: [
             {
@@ -761,7 +768,7 @@
 
         var map = svg.append("svg:g");
         var india = map.append("svg:g").attr("id", "india");
-        d3.json("taminNadu.json", function (json) {
+        d3.json("kerala.json", function (json) {
           console.log(json);
           india
             .selectAll("path")
@@ -770,15 +777,17 @@
             .append("path")
             .attr("d", path)
             .attr("fill", function (d, i) {
-              if (d.properties.NAME_2 === undefined) return "#fff";
+              if (d.properties.DISTRICT === undefined) return "#fff";
 
-              console.log("HERE:", d.properties.NAME_2);
+              // console.log(d.properties.DISTRICT);
+              // allDistricts.push(d.properties.DISTRICT.toUpperCase());
+
               let districtdata = data.find(
                 (a) =>
                   a["Name of District"].toUpperCase() ===
-                  d.properties.NAME_2.toUpperCase()
+                  d.properties.DISTRICT.toUpperCase()
               );
-              console.log("THERE", districtdata);
+              console.log(d.properties.DISTRICT.toUpperCase());
 
               if (
                 parseInt(
@@ -786,35 +795,21 @@
                 ) > 100
               ) {
                 overexploited++;
-                return "rgba(234, 51, 35,1)";
+                return "rgb(234, 51, 35)";
               } else if (
                 parseInt(
                   districtdata["Stage of Ground Water Distribution (%)"]
                 ) > 90
               ) {
                 critical++;
-                return "rgba(140, 28, 100,1)";
+                return "rgb(140, 28, 100)";
               } else if (
                 parseInt(
                   districtdata["Stage of Ground Water Distribution (%)"]
                 ) > 70
               ) {
                 semicritical++;
-                return "rgba(93, 21, 147,1)";
-              } else if (
-                parseInt(
-                  districtdata["Stage of Ground Water Distribution (%)"]
-                ) > 30
-              ) {
-                safe++;
-                return "rgba(44, 20, 196,1)";
-              } else if (
-                parseInt(
-                  districtdata["Stage of Ground Water Distribution (%)"]
-                ) > 20
-              ) {
-                safe++;
-                return "rgba(0, 24, 245,1)";
+                return "rgb(93, 21, 147)";
               } else {
                 safe++;
                 console.log(
@@ -824,18 +819,18 @@
               return "blue";
             })
             .on("mousedown", function (d) {
-              console.log(d.properties.NAME_2.toUpperCase());
-              selectedDistrict = d.properties.NAME_2.toUpperCase();
+              console.log(d.properties.DISTRICT.toUpperCase());
+              selectedDistrict = d.properties.DISTRICT.toUpperCase();
               filterdistrictdata(selectedDistrict);
             })
             .append("title")
             .text(function (d) {
-              if (d.properties.NAME_2 === undefined) return "";
+              if (d.properties.DISTRICT === undefined) return "";
 
               let districtdata = data.find(
                 (a) =>
                   a["Name of District"].toUpperCase() ===
-                  d.properties.NAME_2.toUpperCase()
+                  d.properties.DISTRICT.toUpperCase()
               );
 
               let stage;
@@ -875,7 +870,7 @@
 
               return (
                 "District: " +
-                d.properties.NAME_2 +
+                d.properties.DISTRICT +
                 "\nStage of Ground Water Distribution (%) " +
                 districtdata["Stage of Ground Water Distribution (%)"] +
                 "\nStage: " +
@@ -900,7 +895,7 @@
 
       function initialize() {
         proj.scale(7500);
-        proj.translate([-1480, 370]);
+        proj.translate([-1450, 355]);
       }
 
       init();
