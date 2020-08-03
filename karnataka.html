@@ -125,7 +125,7 @@
       </div>
     </div>
     <div class="stats-table">
-      <div id="status-tabs">
+      <div id="status-tabs">  
         <div class="tab selected">All</div>
         <div class="tab">Over Exploited</div>
         <div class="tab">Critical</div>
@@ -241,9 +241,8 @@
         "Tumkur",
         "Udupi",
       ];
-
       autocomplete(document.getElementById("myInput"), allDistricts);
-
+      
       function autocomplete(inp, arr) {
         /*the autocomplete function takes two arguments,
   the text field element and an array of possible autocompleted values:*/
@@ -549,12 +548,12 @@
         groundWater2017 = data2017districts[titleCase(selectedDistrict)][0]["Total Annual Ground Water Recharge(Ham)"]
         extractWater2017 = data2017districts[titleCase(selectedDistrict)][0]["Total Current Annual Ground Water Extraction(Ham)"]
         extractPercent2017 =
-          data2017districts[titleCase(selectedDistrict)][0]["Stage of Ground Water Distribution (%)"]
+          data2017districts[titleCase(selectedDistrict)][0]["Stage of Ground Water Development (%)"]
 
         groundWater2013 = data2013districts[titleCase(selectedDistrict)][0]["Total Annual Ground Water Recharge(Ham)"]
         extractWater2013 = data2013districts[titleCase(selectedDistrict)][0]["Total Current Annual Ground Water Extraction(Ham)"]
         extractPercent2013 =
-          data2013districts[titleCase(selectedDistrict)][0]["Stage of Ground Water Distribution (%)"]
+          data2013districts[titleCase(selectedDistrict)][0]["Stage of Ground Water Development (%)"]
 
         console.log(premonsoonchartdata);
         console.log(postmonsoonchartdata);
@@ -787,21 +786,21 @@
 
               if (
                 parseInt(
-                  districtdata["Stage of Ground Water Distribution (%)"]
+                  districtdata["Stage of Ground Water Development (%)"]
                 ) > 100
               ) {
                 overexploited++;
                 return "rgb(234, 51, 35)";
               } else if (
                 parseInt(
-                  districtdata["Stage of Ground Water Distribution (%)"]
+                  districtdata["Stage of Ground Water Development (%)"]
                 ) > 90
               ) {
                 critical++;
                 return "rgb(140, 28, 100)";
               } else if (
                 parseInt(
-                  districtdata["Stage of Ground Water Distribution (%)"]
+                  districtdata["Stage of Ground Water Development (%)"]
                 ) > 70
               ) {
                 semicritical++;
@@ -809,7 +808,7 @@
               } else {
                 safe++;
                 console.log(
-                  districtdata["Stage of Ground Water Distribution (%)"]
+                  districtdata["Stage of Ground Water Development (%)"]
                 );
               }
               return "blue";
@@ -833,33 +832,33 @@
 
               if (
                 parseInt(
-                  districtdata["Stage of Ground Water Distribution (%)"]
+                  districtdata["Stage of Ground Water Development (%)"]
                 ) > 100
               )
                 stage = "Over Exploited";
               else if (
                 parseInt(
-                  districtdata["Stage of Ground Water Distribution (%)"]
+                  districtdata["Stage of Ground Water Development (%)"]
                 ) > 90
               )
                 stage = "Critical";
-              // else if(parseInt(districtdata['Stage of Ground Water Distribution (%)']) > 90)
+              // else if(parseInt(districtdata['Stage of Ground Water Development (%)']) > 90)
               //     stage = "Exploited"
               else if (
                 parseInt(
-                  districtdata["Stage of Ground Water Distribution (%)"]
+                  districtdata["Stage of Ground Water Development (%)"]
                 ) > 70
               )
                 stage = "Semi Critical";
               else if (
                 parseInt(
-                  districtdata["Stage of Ground Water Distribution (%)"]
+                  districtdata["Stage of Ground Water Development (%)"]
                 ) > 30
               )
                 stage = "Safe";
               else if (
                 parseInt(
-                  districtdata["Stage of Ground Water Distribution (%)"]
+                  districtdata["Stage of Ground Water Development (%)"]
                 ) > 20
               )
                 stage = "Safe";
@@ -867,8 +866,8 @@
               return (
                 "District: " +
                 d.properties.NAME_2 +
-                "\nStage of Ground Water Distribution (%) " +
-                districtdata["Stage of Ground Water Distribution (%)"] +
+                "\nStage of Ground Water Development (%) " +
+                districtdata["Stage of Ground Water Development (%)"] +
                 "\nStage: " +
                 stage
               );
@@ -895,6 +894,7 @@
       }
 
       init();
+      filterdistrictdata("Bagalkot", statusFilter);
     </script>
   </body>
 </html>

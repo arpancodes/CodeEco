@@ -745,21 +745,21 @@
 
               if (
                 parseInt(
-                  districtdata["Stage of Ground Water Distribution (%)"]
+                  districtdata["Stage of Ground Water Development (%)"]
                 ) > 100
               ) {
                 overexploited++;
                 return "rgb(234, 51, 35)";
               } else if (
                 parseInt(
-                  districtdata["Stage of Ground Water Distribution (%)"]
+                  districtdata["Stage of Ground Water Development (%)"]
                 ) > 90
               ) {
                 critical++;
                 return "rgb(140, 28, 100)";
               } else if (
                 parseInt(
-                  districtdata["Stage of Ground Water Distribution (%)"]
+                  districtdata["Stage of Ground Water Development (%)"]
                 ) > 70
               ) {
                 semicritical++;
@@ -767,7 +767,7 @@
               } else {
                 safe++;
                 console.log(
-                  districtdata["Stage of Ground Water Distribution (%)"]
+                  districtdata["Stage of Ground Water Development (%)"]
                 );
               }
               return "blue";
@@ -791,33 +791,33 @@
 
               if (
                 parseInt(
-                  districtdata["Stage of Ground Water Distribution (%)"]
+                  districtdata["Stage of Ground Water Development (%)"]
                 ) > 100
               )
                 stage = "Over Exploited";
               else if (
                 parseInt(
-                  districtdata["Stage of Ground Water Distribution (%)"]
+                  districtdata["Stage of Ground Water Development (%)"]
                 ) > 90
               )
                 stage = "Critical";
-              // else if(parseInt(districtdata['Stage of Ground Water Distribution (%)']) > 90)
+              // else if(parseInt(districtdata['Stage of Ground Water Development (%)']) > 90)
               //     stage = "Exploited"
               else if (
                 parseInt(
-                  districtdata["Stage of Ground Water Distribution (%)"]
+                  districtdata["Stage of Ground Water Development (%)"]
                 ) > 70
               )
                 stage = "Semi Critical";
               else if (
                 parseInt(
-                  districtdata["Stage of Ground Water Distribution (%)"]
+                  districtdata["Stage of Ground Water Development (%)"]
                 ) > 30
               )
                 stage = "Safe";
               else if (
                 parseInt(
-                  districtdata["Stage of Ground Water Distribution (%)"]
+                  districtdata["Stage of Ground Water Development (%)"]
                 ) > 20
               )
                 stage = "Safe";
@@ -825,8 +825,8 @@
               return (
                 "District: " +
                 d.properties.district +
-                "\nStage of Ground Water Distribution (%) " +
-                districtdata["Stage of Ground Water Distribution (%)"] +
+                "\nStage of Ground Water Development (%) " +
+                districtdata["Stage of Ground Water Development (%)"] +
                 "\nStage: " +
                 stage
               );
@@ -853,6 +853,7 @@
       }
 
       init();
+      filterdistrictdata("NORTH GOA", statusFilter);
     </script>
   </body>
 </html>

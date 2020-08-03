@@ -97,7 +97,6 @@ a.cta {
 }
 
 #map-section table {
-  margin-top: 200px;
   /* border: 5px solid; */
   width: 50%;
   margin-right: -50px;
@@ -188,23 +187,48 @@ tr:nth-of-type(2n) td:not(:first-child) {
   font-size: 2rem;
 }
 
+
+#demobox{
+  position: relative;
+  width: 60%
+}
+#demobox .year-tabs{
+  position: absolute;
+  top:0;
+  right:0;
+}
+#map, #map-dist{
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: -220px;
+  animation: enterFromRight 1s 1s forwards;
+  opacity: 0;
+}
+#map-dist{
+  display: block;
+}
+#map{
+  display: block;
+}
+
+/* 
 #map {
   margin-left: -200px;
   /* padding-right: 120px; */
-  animation: enterFromRight 1s 1s forwards;
-  opacity: 0;
+  /* animation: enterFromRight 1s 1s forwards;
+  opacity: 0; */
   /* border: 1px solid; */
-}
+/* } */
 
-#map svg {
+/* #map svg {
   transform: scale(0.9);
   width: 100% !important;
   margin-left: -40px;
 }
 #map svg text {
   fill: var(--text-color);
-}
-
+} */ 
 .chart svg.highcharts-root {
   width: 50%;
   overflow: hidden !important;
@@ -454,4 +478,111 @@ body > #search-state div {
   font-weight: bold;
   outline: none;
   padding-left: 35px;
+}
+.map-show {
+  display: block;
+  opacity: 1;
+  z-index: 10;
+}
+.map-hide {
+ display: none; 
+  opacity: 0; 
+  z-index: -10;
+}
+.year-tabs {
+  display: flex;
+  margin-top: 0;
+  width: 50%;
+  margin-left: 32px;
+  margin-bottom: -100px;
+}
+.year-tabs h2 {
+  font-size: 0.9rem;
+  margin-top: 85px;
+}
+.year-tabs .tab {
+  margin: 80px 3px 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 100;
+  background-color: rgba(255, 99, 71, 0.26);
+  font-weight: bold;
+  color: tomato;
+  font-size: 0.9rem;
+}
+.year-tabs .tab.selected {
+  background-color: tomato;
+  color: rgb(82, 9, 9);
+}
+
+#totalStages,
+#totalStages13 {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+#totalStages .stage,
+#totalStages13 .stage {
+  margin: 80px 2px 0;
+  width: 17%;
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 100;
+  padding: 10px;
+}
+#totalStages .stage h2,
+#totalStages13 .stage h2 {
+  font-size: 1rem;
+  text-align: center;
+}
+#totalStages .stage p,
+#totalStages13 .stage p {
+  font-size: 2rem;
+  height: 50px;
+  font-weight: bold;
+}
+#totalStages .stage.over-exploited,
+#totalStages13 .stage.over-exploited {
+  color: var(--over-exploited);
+}
+#totalStages .stage.over-exploited,
+#totalStages13 .stage.over-exploited {
+  background: var(--over-exploited-hover);
+}
+#totalStages .stage.critical,
+#totalStages13 .stage.critical {
+  color: var(--critical);
+}
+#totalStages .stage.critical,
+#totalStages13 .stage.critical {
+  background: var(--critical-hover);
+}
+#totalStages .stage.semi-critical,
+#totalStages13 .stage.semi-critical {
+  color: var(--semi-critical);
+}
+#totalStages .stage.semi-critical,
+#totalStages13 .stage.semi-critical {
+  background: var(--semi-critical-hover);
+}
+#totalStages .stage.safe,
+#totalStages13 .stage.safe {
+  color: var(--safe);
+}
+#totalStages .stage.safe,
+#totalStages13 .stage.safe {
+  background: var(--safe-hover);
 }

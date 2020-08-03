@@ -546,35 +546,35 @@
 
               if (
                 parseInt(
-                  districtdata["Stage of Ground Water Distribution (%)"]
+                  districtdata["Stage of Ground Water Development (%)"]
                 ) > 100
               ) {
                 overexploited++;
                 return selectedStage === "over-exploited" || selectedStage===undefined ? "rgba(234, 51, 35,1)" : "rgba(234, 51, 35,0.5)";
               } else if (
                 parseInt(
-                  districtdata["Stage of Ground Water Distribution (%)"]
+                  districtdata["Stage of Ground Water Development (%)"]
                 ) > 90
               ) {
                 critical++;
                 return selectedStage === "critical" || selectedStage===undefined ? "rgba(140, 28, 100,1)" : "rgba(140, 28, 100,0.5)";
               } else if (
                 parseInt(
-                  districtdata["Stage of Ground Water Distribution (%)"]
+                  districtdata["Stage of Ground Water Development (%)"]
                 ) > 70
               ) {
                 semicritical++;
                 return selectedStage === "semi-critical" || selectedStage===undefined ? "rgba(93, 21, 147,1)" : "rgba(93, 21, 147,0.5)";
               } else if (
                 parseInt(
-                  districtdata["Stage of Ground Water Distribution (%)"]
+                  districtdata["Stage of Ground Water Development (%)"]
                 ) > 30
               ) {
                 safe++;
                 return selectedStage === "safe" || selectedStage===undefined ? "rgba(44, 20, 196,1)" : "rgba(44, 20, 196,0.5)";
               } else if (
                 parseInt(
-                  districtdata["Stage of Ground Water Distribution (%)"]
+                  districtdata["Stage of Ground Water Development (%)"]
                 ) > 20
               ) {
                 safe++;
@@ -582,7 +582,7 @@
               } else {
                 safe++;
                 console.log(
-                  districtdata["Stage of Ground Water Distribution (%)"]
+                  districtdata["Stage of Ground Water Development (%)"]
                 );
               }
               return selectedStage === "safe" || selectedStage===undefined ? "rgba(0,0,255,1)" : "blue";
@@ -606,33 +606,33 @@
 
               if (
                 parseInt(
-                  districtdata["Stage of Ground Water Distribution (%)"]
+                  districtdata["Stage of Ground Water Development (%)"]
                 ) > 100
               )
                 stage = "Over Exploited";
               else if (
                 parseInt(
-                  districtdata["Stage of Ground Water Distribution (%)"]
+                  districtdata["Stage of Ground Water Development (%)"]
                 ) > 90
               )
                 stage = "Critical";
-              // else if(parseInt(districtdata['Stage of Ground Water Distribution (%)']) > 90)
+              // else if(parseInt(districtdata['Stage of Ground Water Development (%)']) > 90)
               //     stage = "Exploited"
               else if (
                 parseInt(
-                  districtdata["Stage of Ground Water Distribution (%)"]
+                  districtdata["Stage of Ground Water Development (%)"]
                 ) > 70
               )
                 stage = "Semi Critical";
               else if (
                 parseInt(
-                  districtdata["Stage of Ground Water Distribution (%)"]
+                  districtdata["Stage of Ground Water Development (%)"]
                 ) > 30
               )
                 stage = "Safe";
               else if (
                 parseInt(
-                  districtdata["Stage of Ground Water Distribution (%)"]
+                  districtdata["Stage of Ground Water Development (%)"]
                 ) > 20
               )
                 stage = "Safe";
@@ -640,8 +640,8 @@
               return (
                 "District: " +
                 d.properties.NAME_2 +
-                "\nStage of Ground Water Distribution (%) " +
-                districtdata["Stage of Ground Water Distribution (%)"] +
+                "\nStage of Ground Water Development (%) " +
+                districtdata["Stage of Ground Water Development (%)"] +
                 "\nStage: " +
                 stage
               );

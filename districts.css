@@ -1,3 +1,7 @@
+#chart13 {
+  margin-left: -280.55px;
+}
+
 #mapid {
   background: transparent;
   transform: scale(3.5);
@@ -186,6 +190,7 @@ text.highcharts-title {
 #block-chart {
   margin-top: -250px;
 }
+
 #chart13 {
   margin-left: -280.55px;
 }
@@ -194,9 +199,11 @@ footer {
   height: 250px;
 }
 .map-show {
+  /* display: block; */
   opacity: 1;
 }
 .map-hide {
+  /* display: none; */
   opacity: 0;
 }
 .year-tabs {

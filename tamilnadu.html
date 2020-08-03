@@ -249,7 +249,6 @@
         "Thiruvallur",
         "Tiruvarur",
       ];
-
       autocomplete(document.getElementById("myInput"), allDistricts);
 
       function autocomplete(inp, arr) {
@@ -782,35 +781,35 @@
 
               if (
                 parseInt(
-                  districtdata["Stage of Ground Water Distribution (%)"]
+                  districtdata["Stage of Ground Water Development (%)"]
                 ) > 100
               ) {
                 overexploited++;
                 return "rgba(234, 51, 35,1)";
               } else if (
                 parseInt(
-                  districtdata["Stage of Ground Water Distribution (%)"]
+                  districtdata["Stage of Ground Water Development (%)"]
                 ) > 90
               ) {
                 critical++;
                 return "rgba(140, 28, 100,1)";
               } else if (
                 parseInt(
-                  districtdata["Stage of Ground Water Distribution (%)"]
+                  districtdata["Stage of Ground Water Development (%)"]
                 ) > 70
               ) {
                 semicritical++;
                 return "rgba(93, 21, 147,1)";
               } else if (
                 parseInt(
-                  districtdata["Stage of Ground Water Distribution (%)"]
+                  districtdata["Stage of Ground Water Development (%)"]
                 ) > 30
               ) {
                 safe++;
                 return "rgba(44, 20, 196,1)";
               } else if (
                 parseInt(
-                  districtdata["Stage of Ground Water Distribution (%)"]
+                  districtdata["Stage of Ground Water Development (%)"]
                 ) > 20
               ) {
                 safe++;
@@ -818,7 +817,7 @@
               } else {
                 safe++;
                 console.log(
-                  districtdata["Stage of Ground Water Distribution (%)"]
+                  districtdata["Stage of Ground Water Development (%)"]
                 );
               }
               return "blue";
@@ -842,33 +841,33 @@
 
               if (
                 parseInt(
-                  districtdata["Stage of Ground Water Distribution (%)"]
+                  districtdata["Stage of Ground Water Development (%)"]
                 ) > 100
               )
                 stage = "Over Exploited";
               else if (
                 parseInt(
-                  districtdata["Stage of Ground Water Distribution (%)"]
+                  districtdata["Stage of Ground Water Development (%)"]
                 ) > 90
               )
                 stage = "Critical";
-              // else if(parseInt(districtdata['Stage of Ground Water Distribution (%)']) > 90)
+              // else if(parseInt(districtdata['Stage of Ground Water Development (%)']) > 90)
               //     stage = "Exploited"
               else if (
                 parseInt(
-                  districtdata["Stage of Ground Water Distribution (%)"]
+                  districtdata["Stage of Ground Water Development (%)"]
                 ) > 70
               )
                 stage = "Semi Critical";
               else if (
                 parseInt(
-                  districtdata["Stage of Ground Water Distribution (%)"]
+                  districtdata["Stage of Ground Water Development (%)"]
                 ) > 30
               )
                 stage = "Safe";
               else if (
                 parseInt(
-                  districtdata["Stage of Ground Water Distribution (%)"]
+                  districtdata["Stage of Ground Water Development (%)"]
                 ) > 20
               )
                 stage = "Safe";
@@ -876,8 +875,8 @@
               return (
                 "District: " +
                 d.properties.NAME_2 +
-                "\nStage of Ground Water Distribution (%) " +
-                districtdata["Stage of Ground Water Distribution (%)"] +
+                "\nStage of Ground Water Development (%) " +
+                districtdata["Stage of Ground Water Development (%)"] +
                 "\nStage: " +
                 stage
               );
@@ -904,6 +903,8 @@
       }
 
       init();
+      filterdistrictdata("DHARMAPURI", statusFilter);
+
     </script>
   </body>
 </html>
