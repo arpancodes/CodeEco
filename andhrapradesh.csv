@@ -1,0 +1,548 @@
+District ,Block,Status,Arima Prediction,Expected
+ANANTAPUR,DANDINAHIREHAL ,over_exploited,upward trend,Critical
+ANANTAPUR,RODDAM ,over_exploited,upward trend,Critical
+ANANTAPUR,VIDAPANAKAL ,over_exploited,upward trend,Critical
+ANANTAPUR,YADIKI ,over_exploited,upward trend,Critical
+ANANTAPUR,GUNTAKAL ,over-exploited,upward trend,Critical
+ANANTAPUR,AMADAGUR ,Saline,upward trend,NA
+ANANTAPUR,BELUGUPPA ,Saline,upward trend,NA
+ANANTAPUR,BOMMANAHAL ,Saline,upward trend,NA
+ANANTAPUR,TALUPULA ,Saline,upward trend,NA
+ANANTAPUR,URAVAKONDA ,critical,Downward trend,Over-exploited
+ANANTAPUR,ANANTAPUR ,safe,upward trend,Safe
+ANANTAPUR,ATMAKUR_ATP ,safe,upward trend,Safe
+ANANTAPUR,BATTALAPALLE ,safe,upward trend,Safe
+ANANTAPUR,BRAHMASAMUDRAM ,safe,upward trend,Safe
+ANANTAPUR,BUKKARAYASAMUDRAM ,safe,upward trend,Safe
+ANANTAPUR,CHENNAKOTHAPALLE ,safe,upward trend,Safe
+ANANTAPUR,CHILAMATHURU ,safe,upward trend,Safe
+ANANTAPUR,GANDLAPENTA ,safe,upward trend,Safe
+ANANTAPUR,GARLADINNE ,Safe,upward trend,Safe
+ANANTAPUR,GOOTY ,safe,upward trend,Safe
+ANANTAPUR,GUMMAGATTA ,safe,upward trend,Safe
+ANANTAPUR,HINDUPUR ,safe,upward trend,Safe
+ANANTAPUR,KALYANDURG ,safe,upward trend,Safe
+ANANTAPUR,KAMBADUR ,safe,upward trend,Safe
+ANANTAPUR,KANAGANAPALLE ,safe,upward trend,Safe
+ANANTAPUR,KANNEKAL ,safe,upward trend,Safe
+ANANTAPUR,KOTHACHERUVU ,safe,upward trend,Safe
+ANANTAPUR,LEPAKSHI ,safe,upward trend,Safe
+ANANTAPUR,MADAKASIRA ,safe,upward trend,Safe
+ANANTAPUR,NAMBULIPULAKUNTA ,safe,upward trend,Safe
+ANANTAPUR,NARPALA ,safe,upward trend,Safe
+ANANTAPUR,OBULADEVARACHERUVU ,safe,upward trend,Safe
+ANANTAPUR,PAMIDI ,safe,upward trend,Safe
+ANANTAPUR,PARIGI ,safe,upward trend,Safe
+ANANTAPUR,PEDDAPAPPUR ,safe,upward trend,Safe
+ANANTAPUR,PEDDAVADUGUR ,safe,upward trend,Safe
+ANANTAPUR,PENUKONDA ,safe,upward trend,Safe
+ANANTAPUR,RAMAGIRI ,safe,upward trend,Safe
+ANANTAPUR,RAPTADU ,safe,upward trend,Safe
+ANANTAPUR,RAYADURG ,safe,upward trend,Safe
+ANANTAPUR,ROLLA ,safe,upward trend,Safe
+ANANTAPUR,SETTUR ,safe,upward trend,Safe
+ANANTAPUR,SINGANAMALA ,safe,upward trend,Safe
+ANANTAPUR,SOMANDEPALLI ,safe,upward trend,Safe
+ANANTAPUR,TADIMARRI ,safe,upward trend,Safe
+ANANTAPUR,TADIPATRI ,safe,upward trend,Safe
+ANANTAPUR,TANAKALLU ,safe,upward trend,Safe
+ANANTAPUR,VAJRAKARUR ,safe,upward trend,Safe
+ANANTAPUR,YELLANUR ,safe,upward trend,Safe
+ANANTAPUR,DHARMAVARAM ,semi-critical,upward trend,Safe
+ANANTAPUR,GUDIBANDA ,semi-critical,upward trend,Safe
+ANANTAPUR,KADIRI ,semi-critical,upward trend,Safe
+ANANTAPUR,KUDAIR ,semi-critical,upward trend,Safe
+ANANTAPUR,MUDIGUBBA ,semi-critical,upward trend,Safe
+ANANTAPUR,NALLACHERUVU ,semi-critical,upward trend,Safe
+ANANTAPUR,PUTLUR ,semi-critical,upward trend,Safe
+ANANTAPUR,NALLAMADA ,critical,upward trend,Semi-critical
+ANANTAPUR,AMARAPURAM ,safe,Downward trend,Semi-critical
+ANANTAPUR,PUTTAPARTHI ,safe,Downward trend,Semi-critical
+CHITTOOR,TIRUPATI(U) ,over_exploited,upward trend,Critical
+CHITTOOR,PAKALA ,Saline,Downward trend,NA
+CHITTOOR,PALASAMUDRAM ,Saline,upward trend,NA
+CHITTOOR,PEDDAPANJANI ,critical,Downward trend,Over-exploited
+CHITTOOR,PULICHERLA ,critical,Downward trend,Over-exploited
+CHITTOOR,B.KOTHAKOTA ,safe,upward trend,Safe
+CHITTOOR,BAIREDDIPALLE ,safe,upward trend,Safe
+CHITTOOR,CHANDRAGIRI ,safe,upward trend,Safe
+CHITTOOR,CHINNAGOTTIGALLU ,safe,upward trend,Safe
+CHITTOOR,GUDIPALA ,safe,upward trend,Safe
+CHITTOOR,GUMMIDIPOONDI ,safe,upward trend,Safe
+CHITTOOR,KALAKADA ,safe,upward trend,Safe
+CHITTOOR,MADANAPALLE ,safe,upward trend,Safe
+CHITTOOR,NINDRA ,safe,upward trend,Safe
+CHITTOOR,PALAMANER ,safe,upward trend,Safe
+CHITTOOR,PUNGANUR ,safe,upward trend,Safe
+CHITTOOR,TIRUPATI(R) ,safe,upward trend,Safe
+CHITTOOR,VALMIKI PURAM ,safe,upward trend,Safe
+CHITTOOR,VARADAIAHPALEM ,safe,upward trend,Safe
+CHITTOOR,VENKATAGIRIKOTA ,safe,upward trend,Safe
+CHITTOOR,GANGADHARA-NLR ,semi-critical,upward trend,Safe
+CHITTOOR,VEDURUKUPPAM ,semi-critical,upward trend,Safe
+CHITTOOR,SODAM ,critical,upward trend,Semi-critical
+CHITTOOR,THAMBALLAPALLE ,critical,upward trend,Semi-critical
+CHITTOOR,BANGARUPALEM ,safe,Downward trend,Semi-critical
+CHITTOOR,BUCHINAIDU-KANDRIKA ,safe,Downward trend,Semi-critical
+CHITTOOR,GANGAVARAM_CTR ,safe,Downward trend,Semi-critical
+CHITTOOR,NAGALAPURAM ,safe,Downward trend,Semi-critical
+CHITTOOR,NARAYANAVANAM ,safe,Downward trend,Semi-critical
+CHITTOOR,NIMMANAPALLE ,safe,Downward trend,Semi-critical
+CHITTOOR,PILER ,safe,Downward trend,Semi-critical
+CHITTOOR,SOMALA ,safe,Downward trend,Semi-critical
+CHITTOOR,SRIKALAHASTHI ,safe,Downward trend,Semi-critical
+CHITTOOR,VADAMALPETA ,safe,Downward trend,Semi-critical
+CHITTOOR,YERRAVARIPALEM ,safe,Downward trend,Semi-critical
+EAST GODAVARI,AINAVILLI ,over_exploited,upward trend,Critical
+EAST GODAVARI,PEDDAPURAM ,over_exploited,upward trend,Critical
+EAST GODAVARI,TUNI ,over_exploited,upward trend,Critical
+EAST GODAVARI,BIKKAVOLU ,over-exploited,upward trend,Critical
+EAST GODAVARI,RANGAMPET ,semi-critical,downward trend,Critical
+EAST GODAVARI,RAMACHANDRAPURAM_EG ,Saline,upward trend,NA
+EAST GODAVARI,SANKAVARAM ,Saline,upward trend,NA
+EAST GODAVARI,ADDATIGALA ,safe,upward trend,Safe
+EAST GODAVARI,ALAMURU ,safe,upward trend,Safe
+EAST GODAVARI,AMALAPURAM ,safe,upward trend,Safe
+EAST GODAVARI,AMBAJUPETA ,safe,upward trend,Safe
+EAST GODAVARI,ATREYAPURAM ,safe,upward trend,Safe
+EAST GODAVARI,DEVIPATNAM ,safe,upward trend,Safe
+EAST GODAVARI,GONDEPALLE ,safe,upward trend,Safe
+EAST GODAVARI,JAGGAMPETA ,safe,upward trend,Safe
+EAST GODAVARI,KAJULURU ,safe,upward trend,Safe
+EAST GODAVARI,KAKINADA(U) ,safe,upward trend,Safe
+EAST GODAVARI,KAPILESWARAPURAM ,safe,upward trend,Safe
+EAST GODAVARI,KARAPA ,safe,upward trend,Safe
+EAST GODAVARI,KORUKONDA ,safe,upward trend,Safe
+EAST GODAVARI,KOTANANDURU ,safe,upward trend,Safe
+EAST GODAVARI,KOTHAPETA ,safe,upward trend,Safe
+EAST GODAVARI,MAMIDIKUDURU ,safe,upward trend,Safe
+EAST GODAVARI,P.GANNAVARAM ,safe,upward trend,Safe
+EAST GODAVARI,PITHAPURAM ,safe,upward trend,Safe
+EAST GODAVARI,PRATHIPADU_EGD ,safe,upward trend,Safe
+EAST GODAVARI,RAJAVOMMANGI ,safe,upward trend,Safe
+EAST GODAVARI,RAMPACHODAVARAM ,safe,upward trend,Safe
+EAST GODAVARI,RAVULAPALEM ,safe,upward trend,Safe
+EAST GODAVARI,RAZOLE ,safe,upward trend,Safe
+EAST GODAVARI,SEETHANAGARAM ,safe,upward trend,Safe
+EAST GODAVARI,Y.RAMAVARAM ,safe,upward trend,Safe
+EAST GODAVARI,MAREDUMILLI ,semi-critical,upward trend,Safe
+EAST GODAVARI,U.KOTHAPALLI ,critical,downward trend,Semi-critical
+EAST GODAVARI,ELESWARAM ,safe,downward trend,Semi-critical
+EAST GODAVARI,GANGAVARAM_EGD ,safe,downward trend,Semi-critical
+EAST GODAVARI,GOKAVARAM ,safe,downward trend,Semi-critical
+EAST GODAVARI,GOLLAPROLU ,safe,downward trend,Semi-critical
+EAST GODAVARI,KADIYAM ,safe,downward trend,Semi-critical
+EAST GODAVARI,KAKINADA(R) ,safe,downward trend,Semi-critical
+EAST GODAVARI,MANDAPETA ,safe,downward trend,Semi-critical
+EAST GODAVARI,RAJANAGARAM ,safe,downward trend,Semi-critical
+EAST GODAVARI,RAYAVARAM ,safe,downward trend,Semi-critical
+EAST GODAVARI,SAMARLAKOTA ,safe,downward trend,Semi-critical
+EAST GODAVARI,THONDANGI ,safe,downward trend,Semi-critical
+GUNTUR,AMARAVATI ,over_exploited,upward trend,Critical
+GUNTUR,IPUR ,over_exploited,upward trend,Critical
+GUNTUR,PONNUR ,over_exploited,upward trend,Critical
+GUNTUR,KAREMPUDI ,semi-critical,downward trend,Critical
+GUNTUR,MUPPALLA ,semi-critical,downward trend,Critical
+GUNTUR,TADIKONDA ,semi-critical,downward trend,Critical
+GUNTUR,NIZAMPATNAM ,Saline,upward trend,NA
+GUNTUR,PHIRANGIPURAM ,Saline,upward trend,NA
+GUNTUR,AMRUTHALURU ,safe,upward trend,Safe
+GUNTUR,BATTIPROLU ,safe,upward trend,Safe
+GUNTUR,BELLAMKONDA ,safe,upward trend,Safe
+GUNTUR,BOLLAPALLE ,safe,upward trend,Safe
+GUNTUR,CHERUKUPALLE ,safe,upward trend,Safe
+GUNTUR,CHILAKALURIPETA ,safe,upward trend,Safe
+GUNTUR,EDLAPADU ,safe,upward trend,Safe
+GUNTUR,GUNTUR ,safe,upward trend,Safe
+GUNTUR,KARLAPALEM ,safe,upward trend,Safe
+GUNTUR,KOLLIPARA ,safe,upward trend,Safe
+GUNTUR,KOLLUR ,safe,upward trend,Safe
+GUNTUR,MACHAVARAM ,safe,upward trend,Safe
+GUNTUR,MACHERLA ,safe,upward trend,Safe
+GUNTUR,MANGALAGIRI ,safe,upward trend,Safe
+GUNTUR,NEKARIKALLU ,safe,upward trend,Safe
+GUNTUR,NUZENDLA ,safe,upward trend,Safe
+GUNTUR,PIDUGURALLA ,safe,upward trend,Safe
+GUNTUR,PRATHIPADU_GNT ,safe,upward trend,Safe
+GUNTUR,RAJUPALEM_GNT ,safe,upward trend,Safe
+GUNTUR,REPALLE ,safe,upward trend,Safe
+GUNTUR,ROMPICHERLA_GNT ,safe,upward trend,Safe
+GUNTUR,TENALI ,safe,upward trend,Safe
+GUNTUR,THULLURU ,safe,upward trend,Safe
+GUNTUR,VATTICHERUKURU ,safe,upward trend,Safe
+GUNTUR,VEMURU ,safe,upward trend,Safe
+GUNTUR,VINUKONDA ,safe,upward trend,Safe
+GUNTUR,DUGGIRALA ,semi-critical,upward trend,Safe
+GUNTUR,KROSURU ,semi-critical,upward trend,Safe
+GUNTUR,SATTENAPALLI ,critical,upward trend,Semi-critical
+GUNTUR,ATCHAMPETA ,safe,downward trend,Semi-critical
+GUNTUR,BAPATLA ,safe,downward trend,Semi-critical
+GUNTUR,CHEBROLU ,safe,downward trend,Semi-critical
+GUNTUR,DACHEPALLE ,safe,downward trend,Semi-critical
+GUNTUR,DURGI ,safe,downward trend,Semi-critical
+GUNTUR,GURAJALA ,safe,downward trend,Semi-critical
+GUNTUR,MEDIKONDURU ,safe,downward trend,Semi-critical
+GUNTUR,NADENDLA ,safe,downward trend,Semi-critical
+GUNTUR,NAGARAM ,safe,downward trend,Semi-critical
+GUNTUR,NARASARAOPET ,safe,downward trend,Semi-critical
+GUNTUR,PEDAKURAPADU ,safe,downward trend,Semi-critical
+GUNTUR,PEDANANDIPADU ,safe,downward trend,Semi-critical
+GUNTUR,PITTALAVANIPALEM ,safe,downward trend,Semi-critical
+GUNTUR,RENTACHINTALA ,safe,downward trend,Semi-critical
+GUNTUR,SAVALYAPURAM ,safe,downward trend,Semi-critical
+GUNTUR,TADEPALLI ,safe,downward trend,Semi-critical
+GUNTUR,VELDURTHI_GNT ,safe,downward trend,Semi-critical
+KRISHNA,KALIDINDI ,over_exploited,upward trend,Critical
+KRISHNA,VIAYAWADA (URBAN) ,over_exploited,upward trend,Critical
+KRISHNA,TIRUVURU ,semi-critical,downward Trend,Critical
+KRISHNA,JAGGAYYAPETA ,Saline,downward Trend,NA
+KRISHNA,KODURU_KRI ,Saline,upward trend,NA
+KRISHNA,PEDANA ,Saline,upward trend,NA
+KRISHNA,PENUGANCHIPROLU ,Saline,upward trend,NA
+KRISHNA,VUYYURU ,Saline,upward trend,NA
+KRISHNA,AGIRIPALLE ,safe,upward trend,Safe
+KRISHNA,BAPULAPADU ,safe,upward trend,Safe
+KRISHNA,CHALLAPALLI ,safe,upward trend,Safe
+KRISHNA,CHATRAI ,safe,upward trend,Safe
+KRISHNA,CHENDRALUPADU ,safe,upward trend,Safe
+KRISHNA,G.KONDURU ,safe,upward trend,Safe
+KRISHNA,GAMPALAGUDEM ,safe,upward trend,Safe
+KRISHNA,GANNAVARAM ,safe,upward trend,Safe
+KRISHNA,GHANTASALA ,safe,upward trend,Safe
+KRISHNA,GUDIVADA ,safe,upward trend,Safe
+KRISHNA,GUDLAVALLERU ,safe,upward trend,Safe
+KRISHNA,GUDURU_KRI ,safe,upward trend,Safe
+KRISHNA,IBRAHIMPATNAM_KRI ,safe,upward trend,Safe
+KRISHNA,KANCHIKACHERLA ,safe,upward trend,Safe
+KRISHNA,KRUTHIVENNU ,safe,upward trend,Safe
+KRISHNA,MACHILIPATNAM ,safe,upward trend,Safe
+KRISHNA,MANDAVALLI ,safe,upward trend,Safe
+KRISHNA,MOPIDEVI ,safe,upward trend,Safe
+KRISHNA,MOVVA ,safe,upward trend,Safe
+KRISHNA,MUDINEPALLE ,safe,upward trend,Safe
+KRISHNA,MUSUNURU ,safe,upward trend,Safe
+KRISHNA,MYLAVARAM_KRI ,safe,upward trend,Safe
+KRISHNA,NAGAYALANKA ,safe,upward trend,Safe
+KRISHNA,NANDIGAMA ,safe,upward trend,Safe
+KRISHNA,NANDIWADA ,safe,upward trend,Safe
+KRISHNA,PAMARRU ,safe,upward trend,Safe
+KRISHNA,REDDIGUDEM ,Safe,upward trend,Safe
+KRISHNA,UNGUTURU_KRI ,safe,upward trend,Safe
+KRISHNA,VIAYAWADA (RURAL) ,safe,upward trend,Safe
+KRISHNA,VISSANNAPETA ,safe,upward trend,Safe
+KRISHNA,AVANIGADDA ,semi-critical,upward trend,Safe
+KRISHNA,PAMIDIMUKKALA ,semi-critical,upward trend,Safe
+KRISHNA,PENAMALURU ,semi-critical,upward trend,Safe
+KRISHNA,VEERULAPADU ,semi-critical,upward trend,Safe
+KRISHNA,THOTLAVALLURU ,critical,upward trend,Semi-critical
+KRISHNA,VATSAVAI ,critical,upward trend,Semi-critical
+KRISHNA,A.KONDURU ,safe,Downward Trend,Semi-critical
+KRISHNA,NUZVID ,safe,downward Trend,Semi-critical
+KURNOOL,TUGGALI ,over_exploited,upward trend,Critical
+KURNOOL,BANDIATAMAKUR ,semi-critical,downward Trend,Critical
+KURNOOL,MAHANANDI ,semi-critical,downward Trend,Critical
+KURNOOL,ALLAGADDA ,Saline,upward trend,NA
+KURNOOL,KRISHNAGIRI ,Saline,downward Trend,NA
+KURNOOL,KURNOOL ,Saline,upward trend,NA
+KURNOOL,NANDYALA ,Saline,upward trend,NA
+KURNOOL,ADONI ,safe,upward trend,Safe
+KURNOOL,ALUR ,safe,upward trend,Safe
+KURNOOL,ATMAKUR_KRNL ,safe,upward trend,Safe
+KURNOOL,C.BELGAL ,safe,upward trend,Safe
+KURNOOL,CHIPPAGIRI ,safe,upward trend,Safe
+KURNOOL,DEVANAKONDA ,safe,upward trend,Safe
+KURNOOL,GONEGANDLA ,safe,upward trend,Safe
+KURNOOL,GOSPAD ,safe,upward trend,Safe
+KURNOOL,GUDURU_KUR ,safe,upward trend,Safe
+KURNOOL,HALAHARVI ,safe,upward trend,Safe
+KURNOOL,KAUTALAM ,safe,upward trend,Safe
+KURNOOL,KODUMUR ,safe,upward trend,Safe
+KURNOOL,KOLIMIGUNDLA ,safe,upward trend,Safe
+KURNOOL,MIDTHUR ,safe,upward trend,Safe
+KURNOOL,NANDAVARAM ,Safe,upward trend,Safe
+KURNOOL,ORVAKAL ,safe,upward trend,Safe
+KURNOOL,PAGIDYALA ,safe,upward trend,Safe
+KURNOOL,VELDURTHI_KUR ,safe,upward trend,Safe
+KURNOOL,YEMMIGANUR ,safe,upward trend,Safe
+KURNOOL,DHONE ,semi-critical,upward trend,Safe
+KURNOOL,HOLAGONDA ,semi-critical,upward trend,Safe
+KURNOOL,ASPARI ,safe,downward Trend,Semi-critical
+KURNOOL,BANAGANAPALLE ,safe,downward Trend,Semi-critical
+KURNOOL,CHAGALAMARRI ,safe,downward Trend,Semi-critical
+KURNOOL,GADIVEMULA ,safe,downward Trend,Semi-critical
+KURNOOL,JUPADUBUNGLOW ,safe,downward Trend,Semi-critical
+KURNOOL,KALLURU_KUR ,safe,downward Trend,Semi-critical
+KURNOOL,KIOLKUNTLA ,safe,downward Trend,Semi-critical
+KURNOOL,KOSIGI ,safe,downward Trend,Semi-critical
+KURNOOL,MANTRALAYAM ,safe,downward Trend,Semi-critical
+KURNOOL,OWK ,safe,downward Trend,Semi-critical
+KURNOOL,PAMULAPADU ,safe,downward Trend,Semi-critical
+KURNOOL,PANYAM ,safe,downward Trend,Semi-critical
+KURNOOL,PATHIKONDA ,safe,downward Trend,Semi-critical
+KURNOOL,PEAPULLY ,safe,downward Trend,Semi-critical
+KURNOOL,RUDRAVARAM ,safe,downward Trend,Semi-critical
+KURNOOL,SANJAMALA ,safe,downward Trend,Semi-critical
+KURNOOL,UYYALAWADA ,safe,downward Trend,Semi-critical
+KURNOOL,VELUGODU ,safe,downward Trend,Semi-critical
+PRAKASAM,MARRIPUDI ,over_exploited,upward trend,Critical
+PRAKASAM,ONGOLE ,over-exploited,upward trend,Critical
+PRAKASAM,KONAKANAMITLA ,Saline,upward trend,NA
+PRAKASAM,KONDEPI ,Saline,upward trend,NA
+PRAKASAM,LINGASAMUDRAM ,Saline,upward trend,NA
+PRAKASAM,MUNDALAMUR ,Saline,upward trend,NA
+PRAKASAM,PULLACHERUVU ,over_exploited,downward Trend,Over-exploited
+PRAKASAM,ADDANKI ,safe,upward trend,Safe
+PRAKASAM,BALLIKURAVA ,safe,upward trend,Safe
+PRAKASAM,BESTAVARIPETA ,safe,upward trend,Safe
+PRAKASAM,CHANDRASEKHARAPURAM ,safe,upward trend,Safe
+PRAKASAM,CHIMAKURTI ,Safe,upward trend,Safe
+PRAKASAM,CHIRALA ,safe,upward trend,Safe
+PRAKASAM,CUMBUM ,safe,upward trend,Safe
+PRAKASAM,DONAKONDA ,safe,upward trend,Safe
+PRAKASAM,DORNALA ,safe,upward trend,Safe
+PRAKASAM,GUDULUR ,safe,upward trend,Safe
+PRAKASAM,JANAKAVARAM-PANGULLU ,safe,upward trend,Safe
+PRAKASAM,KANDUKUR_PRK ,safe,upward trend,Safe
+PRAKASAM,KANIGIRI ,safe,upward trend,Safe
+PRAKASAM,KOMAROLE ,safe,upward trend,Safe
+PRAKASAM,KORISAPADU ,safe,upward trend,Safe
+PRAKASAM,MARKAPUR ,safe,upward trend,Safe
+PRAKASAM,MARTUR ,safe,upward trend,Safe
+PRAKASAM,PAMURU ,safe,upward trend,Safe
+PRAKASAM,PEDDACHERLOPALLI ,safe,upward trend,Safe
+PRAKASAM,PEDDARAVEEDU ,safe,upward trend,Safe
+PRAKASAM,PODILI ,safe,upward trend,Safe
+PRAKASAM,PONNALURU ,safe,upward trend,Safe
+PRAKASAM,RACHERLA ,safe,upward trend,Safe
+PRAKASAM,SANTHANUTHALAPADU ,safe,upward trend,Safe
+PRAKASAM,TALLUR ,safe,upward trend,Safe
+PRAKASAM,VELIGANDLA ,safe,upward trend,Safe
+PRAKASAM,VETAPALEM ,safe,upward trend,Safe
+PRAKASAM,VOLETIVARIPALEM ,safe,upward trend,Safe
+PRAKASAM,YADDANAPUDI ,safe,upward trend,Safe
+PRAKASAM,YERRAGONDAPALEM ,safe,upward trend,Safe
+PRAKASAM,CHINNA GANJAM ,semi-critical,upward trend,Safe
+PRAKASAM,DARSI ,semi-critical,upward trend,Safe
+PRAKASAM,HANUMANTHUNIPADU ,semi-critical,upward trend,Safe
+PRAKASAM,NAGULUPPALAPADU ,semi-critical,upward trend,Safe
+PRAKASAM,TARLUPADU ,semi-critical,upward trend,Safe
+PRAKASAM,GUDLURU ,critical,downward Trend,Semi-critical
+PRAKASAM,JARUGUMALLI ,safe,downward Trend,Semi-critical
+PRAKASAM,KOTHAPATNAM ,safe,downward Trend,Semi-critical
+PRAKASAM,KURICHEDU ,safe,downward Trend,Semi-critical
+PRAKASAM,PARCHUR ,safe,downward Trend,Semi-critical
+PRAKASAM,SANTAMAGULURU ,safe,downward Trend,Semi-critical
+PRAKASAM,TRIPURANTAKAM ,safe,downward Trend,Semi-critical
+S.P.S. Nellore,INDUKURUPETA ,over_exploited,upward trend,Critical
+S.P.S. Nellore,KOTA ,over_exploited,upward trend,Critical
+S.P.S. Nellore,KALUVOYA ,Saline,upward trend,NA
+S.P.S. Nellore,NELLORE RURAL ,Saline,upward trend,NA
+S.P.S. Nellore,NAIDUPETA ,over-exploited,downward trend,Over-exploited
+S.P.S. Nellore,ALLUR ,safe,upward trend,Safe
+S.P.S. Nellore,ANANTASAGARAM ,safe,upward trend,Safe
+S.P.S. Nellore,AP_S.P.S. Nellore_4210 ,safe,upward trend,Safe
+S.P.S. Nellore,BOGOLE ,safe,upward trend,Safe
+S.P.S. Nellore,CHEJERLA ,safe,upward trend,Safe
+S.P.S. Nellore,CHILLAKUR ,safe,upward trend,Safe
+S.P.S. Nellore,CHITTAMUR ,safe,upward trend,Safe
+S.P.S. Nellore,DORAVARISATRAM ,safe,upward trend,Safe
+S.P.S. Nellore,DUTTALUR ,safe,upward trend,Safe
+S.P.S. Nellore,GUDUR_NLR ,safe,upward trend,Safe
+S.P.S. Nellore,JALADANDI ,safe,upward trend,Safe
+S.P.S. Nellore,KALIGIRI ,safe,upward trend,Safe
+S.P.S. Nellore,KAVALI ,safe,upward trend,Safe
+S.P.S. Nellore,KODAVALUR ,safe,upward trend,Safe
+S.P.S. Nellore,KOVVUR_NLR ,safe,upward trend,Safe
+S.P.S. Nellore,MARRIPADU ,safe,upward trend,Safe
+S.P.S. Nellore,MUTTUKUR ,safe,upward trend,Safe
+S.P.S. Nellore,OZILI ,safe,upward trend,Safe
+S.P.S. Nellore,PODALAKUR ,safe,upward trend,Safe
+S.P.S. Nellore,RAPUR ,safe,upward trend,Safe
+S.P.S. Nellore,SANGAM ,safe,upward trend,Safe
+S.P.S. Nellore,SULLURUPETA ,safe,upward trend,Safe
+S.P.S. Nellore,SYDAPURAM ,safe,upward trend,Safe
+S.P.S. Nellore,TADA ,safe,upward trend,Safe
+S.P.S. Nellore,UDAYAGIRI ,safe,upward trend,Safe
+S.P.S. Nellore,VENKATACHALAM ,safe,upward trend,Safe
+S.P.S. Nellore,VENKATAGIRI ,safe,upward trend,Safe
+S.P.S. Nellore,VIDAVALUR ,safe,upward trend,Safe
+S.P.S. Nellore,VINJAMUR ,safe,downward trend,Semi-critical
+S.P.S. Nellore,BALAYAPALLI ,semi-critical,upward trend,Safe
+S.P.S. Nellore,DAKKILI ,semi-critical,upward trend,Safe
+S.P.S. Nellore,KONDAPURAM_NLR ,semi-critical,upward trend,Safe
+S.P.S. Nellore,VAKADU ,critical,upward trend,Semi-critical
+S.P.S. Nellore,ATMAKUR_NLR ,safe,downward trend,Semi-critical
+SRIKAKULAM,NARASANNAPETA ,over_exploited,upward trend,Critical
+SRIKAKULAM,GARIVIDI ,semi-critical,downward trend,Critical
+SRIKAKULAM,PONDURU ,Saline,upward trend,NA
+SRIKAKULAM,SANTABOMMALI ,Saline,upward trend,NA
+SRIKAKULAM,SRIKAKULAM ,Saline,downward trend,NA
+SRIKAKULAM,AMUDALAVALASA ,over_exploited,downward trend,Over-exploited
+SRIKAKULAM,BURJA ,safe,upward trend,Safe
+SRIKAKULAM,ETCHERLA ,safe,upward trend,Safe
+SRIKAKULAM,HEERAMANDALAM ,safe,upward trend,Safe
+SRIKAKULAM,ICHAPURAM ,safe,upward trend,Safe
+SRIKAKULAM,JALUMURU ,safe,upward trend,Safe
+SRIKAKULAM,KANCHILI ,safe,upward trend,Safe
+SRIKAKULAM,KOTHABOMMALI ,safe,upward trend,Safe
+SRIKAKULAM,MANDASA ,safe,upward trend,Safe
+SRIKAKULAM,MELIAPUTTI ,safe,upward trend,Safe
+SRIKAKULAM,MERAKAMUDIDAM ,safe,upward trend,Safe
+SRIKAKULAM,PALAKONDA ,safe,upward trend,Safe
+SRIKAKULAM,PATAPATNAM ,safe,upward trend,Safe
+SRIKAKULAM,POLAKI ,safe,upward trend,Safe
+SRIKAKULAM,SARAVAKOTA ,safe,upward trend,Safe
+SRIKAKULAM,SEETHAMPETA ,safe,upward trend,Safe
+SRIKAKULAM,SOMPETA ,safe,upward trend,Safe
+SRIKAKULAM,V.KOTTURU ,safe,upward trend,Safe
+SRIKAKULAM,VEERAGHATTAM ,safe,upward trend,Safe
+SRIKAKULAM,GARA ,semi-critical,upward trend,Safe
+SRIKAKULAM,PALASA ,semi-critical,upward trend,Safe
+SRIKAKULAM,RAJAM ,critical,upward trend,Semi-critical
+SRIKAKULAM,BHAMINI ,safe,downward trend,Semi-critical
+SRIKAKULAM,GANGUVARISIGADAM ,safe,downward trend,Semi-critical
+SRIKAKULAM,KOTHURU_SRI ,safe,downward trend,Semi-critical
+SRIKAKULAM,LAVERU ,safe,downward trend,Semi-critical
+SRIKAKULAM,NANDIGAM ,Safe,downward trend,Semi-critical
+SRIKAKULAM,R.AMDALAVALASA ,safe,downward trend,Semi-critical
+SRIKAKULAM,SANTHAKAVITI ,safe,downward trend,Semi-critical
+SRIKAKULAM,TEKKALI ,safe,downward trend,Semi-critical
+VISAKHAPATNAM,GUDEM KOTHAVEEDI ,over_exploited,upward trend,Critical
+VISAKHAPATNAM,PARAWADA ,over-exploited,upward trend,Critical
+VISAKHAPATNAM,KOYYURU ,Saline,upward trend,NA
+VISAKHAPATNAM,CHODAVARAM ,over_exploited,downward trend,Over-exploited
+VISAKHAPATNAM,HUKUMPET ,over_exploited,downward trend,Over-exploited
+VISAKHAPATNAM,SABBAVARAM ,over-exploited,downward trend,Over-exploited
+VISAKHAPATNAM,ANAKAPALLE ,safe,upward trend,Safe
+VISAKHAPATNAM,ANANDAPURAM ,safe,upward trend,Safe
+VISAKHAPATNAM,ANANTAGIRI ,safe,upward trend,Safe
+VISAKHAPATNAM,BHEEMUNIPATNAM ,safe,upward trend,Safe
+VISAKHAPATNAM,CHIDIKADA ,safe,upward trend,Safe
+VISAKHAPATNAM,DEVARAPALLI_VSP ,safe,upward trend,Safe
+VISAKHAPATNAM,DUMBRIGUDA ,safe,upward trend,Safe
+VISAKHAPATNAM,GOLUGONDA ,safe,upward trend,Safe
+VISAKHAPATNAM,MUNCHINGIPUTTU ,safe,upward trend,Safe
+VISAKHAPATNAM,PADMANABHAM ,safe,upward trend,Safe
+VISAKHAPATNAM,RAVIKAMATAM ,safe,upward trend,Safe
+VISAKHAPATNAM,VSP-1 ,safe,upward trend,Safe
+VISAKHAPATNAM,YELAMANCHILI ,safe,upward trend,Safe
+VISAKHAPATNAM,S.RAYAVARAM ,semi-critical,upward trend,Safe
+VISAKHAPATNAM,KASIMKOTA ,critical,upward trend,Semi-critical
+VISAKHAPATNAM,KOTAURATLA ,critical,downward trend,Semi-critical
+VISAKHAPATNAM,ATCHUTAPURAM ,safe,downward trend,Semi-critical
+VISAKHAPATNAM,CHINTAPALLE_VSP ,safe,downward trend,Semi-critical
+VISAKHAPATNAM,GAJUVAKA ,safe,downward trend,Semi-critical
+VISAKHAPATNAM,K.KOTAPADU ,safe,downward trend,Semi-critical
+VISAKHAPATNAM,MAKAVARAPALEM ,safe,downward trend,Semi-critical
+VISAKHAPATNAM,MUNAGAPAKA ,safe,downward trend,Semi-critical
+VISAKHAPATNAM,NAKKAPALLI ,safe,downward trend,Semi-critical
+VISAKHAPATNAM,PADERU ,safe,downward trend,Semi-critical
+VISAKHAPATNAM,PENDURTI ,safe,downward trend,Semi-critical
+VISAKHAPATNAM,RAMBILLI ,safe,downward trend,Semi-critical
+VISAKHAPATNAM,ROLUGUNTA ,safe,downward trend,Semi-critical
+VISAKHAPATNAM,VSP URBAN ,safe,downward trend,Semi-critical
+VIZIANAGARAM,DENKADA ,semi-critical,downward trend,Critical
+VIZIANAGARAM,JAMI ,Saline,downward trend,NA
+VIZIANAGARAM,RAMABHADRAPURAM ,Saline,upward trend,NA
+VIZIANAGARAM,BADANGI ,safe,upward trend,Safe
+VIZIANAGARAM,BALIJIPETA ,safe,upward trend,Safe
+VIZIANAGARAM,BHOGAPURAM ,safe,upward trend,Safe
+VIZIANAGARAM,GAJAPATINAGARAM ,safe,upward trend,Safe
+VIZIANAGARAM,GANTYADA ,safe,upward trend,Safe
+VIZIANAGARAM,GARUGUBILLI ,Safe,upward trend,Safe
+VIZIANAGARAM,GUMMALA LAXMIPURAM ,safe,upward trend,Safe
+VIZIANAGARAM,JIYAMMAVALASA ,safe,upward trend,Safe
+VIZIANAGARAM,KOMARADA ,safe,upward trend,Safe
+VIZIANAGARAM,KOTHAVALASA ,safe,upward trend,Safe
+VIZIANAGARAM,KURUPAM ,safe,upward trend,Safe
+VIZIANAGARAM,MAKKUVA ,safe,upward trend,Safe
+VIZIANAGARAM,NELLIMARLA ,safe,upward trend,Safe
+VIZIANAGARAM,PACHIPENTA ,safe,upward trend,Safe
+VIZIANAGARAM,PARVATHIPURAM ,safe,upward trend,Safe
+VIZIANAGARAM,PUSAPATIREGA ,safe,upward trend,Safe
+VIZIANAGARAM,SALURU ,safe,upward trend,Safe
+VIZIANAGARAM,SEETHANAGARAM ,safe,upward trend,Safe
+VIZIANAGARAM,THERLAM ,safe,upward trend,Safe
+VIZIANAGARAM,VEPADA ,safe,upward trend,Safe
+VIZIANAGARAM,BOBBILI ,semi-critical,upward trend,Safe
+VIZIANAGARAM,LAKKAVARAPUKOTA ,semi-critical,upward trend,Safe
+VIZIANAGARAM,VIZIANAGARAM ,semi-critical,upward trend,Safe
+VIZIANAGARAM,BONDAPALLE ,safe,downward trend,Semi-critical
+VIZIANAGARAM,SRUNGAVARAPUKOTA ,safe,downward trend,Semi-critical
+WEST GODAVARI,BUTTAYAGUDEM ,over_exploited,upward trend,Critical
+WEST GODAVARI,LINGAPALEM ,over_exploited,upward trend,Critical
+WEST GODAVARI,NALLAJERLA ,over_exploited,upward trend,Critical
+WEST GODAVARI,UNDI ,over-exploited,upward trend,Critical
+WEST GODAVARI,VEERAVASARAM ,over-exploited,upward trend,Critical
+WEST GODAVARI,NIDADAVOLE ,Saline,upward trend,NA
+WEST GODAVARI,ACHANTA ,safe,upward trend,Safe
+WEST GODAVARI,AKIVEEDU ,safe,upward trend,Safe
+WEST GODAVARI,ATTILI ,safe,upward trend,Safe
+WEST GODAVARI,BHIMAVARAM ,safe,upward trend,Safe
+WEST GODAVARI,CHINTALAPUDI ,safe,upward trend,Safe
+WEST GODAVARI,DENDULURU ,safe,upward trend,Safe
+WEST GODAVARI,DEVARAPALLI_WGD ,safe,upward trend,Safe
+WEST GODAVARI,DWARAKATIRUMALA ,safe,upward trend,Safe
+WEST GODAVARI,ELURU ,safe,upward trend,Safe
+WEST GODAVARI,GANAPAVARAM ,safe,upward trend,Safe
+WEST GODAVARI,GOPALAPURAM ,safe,upward trend,Safe
+WEST GODAVARI,IRAGAVARAM ,safe,upward trend,Safe
+WEST GODAVARI,JANGAREDDIGUDEM ,safe,upward trend,Safe
+WEST GODAVARI,KALLA ,safe,upward trend,Safe
+WEST GODAVARI,KAMAVARAPUKOTA ,safe,upward trend,Safe
+WEST GODAVARI,KOYYALAGUDEM ,safe,upward trend,Safe
+WEST GODAVARI,NARSAPURAM ,safe,upward trend,Safe
+WEST GODAVARI,NIDAMARRU ,safe,upward trend,Safe
+WEST GODAVARI,PALAKODERU ,safe,upward trend,Safe
+WEST GODAVARI,PEDAVEGI ,safe,upward trend,Safe
+WEST GODAVARI,PODURU ,safe,upward trend,Safe
+WEST GODAVARI,POLAVARAM ,safe,upward trend,Safe
+WEST GODAVARI,TADEPALLIGUDEM ,safe,upward trend,Safe
+WEST GODAVARI,TALLAPUDI ,safe,upward trend,Safe
+WEST GODAVARI,UNDRAJAVARAM ,safe,upward trend,Safe
+WEST GODAVARI,CHAGALLU ,semi-critical,upward trend,Safe
+WEST GODAVARI,PEDAPADU ,semi-critical,upward trend,Safe
+WEST GODAVARI,UNGUTURU_WGD ,semi-critical,upward trend,Safe
+WEST GODAVARI,T. NARASAPURAM ,critical,upward trend,Semi-critical
+WEST GODAVARI,JEELUGUMILLI ,safe,downward trend,Semi-critical
+WEST GODAVARI,KOVVURU ,safe,downward trend,Semi-critical
+WEST GODAVARI,MOGALTURU ,safe,downward trend,Semi-critical
+WEST GODAVARI,PENUMANTRA ,safe,downward trend,Semi-critical
+WEST GODAVARI,TANUKU ,safe,downward trend,Semi-critical
+Y.S.R. Kadapa,VEERABALLI ,over_exploited,Upward trend,Critical
+Y.S.R. Kadapa,MYDUKUR ,semi-critical,Downward trend,Critical
+Y.S.R. Kadapa,GOPAVARAM ,Saline,Upward trend,NA
+Y.S.R. Kadapa,KODURU ,Saline,Downward trend,NA
+Y.S.R. Kadapa,ATLUR ,safe,Upward trend,Safe
+Y.S.R. Kadapa,BADVEL ,safe,Upward trend,Safe
+Y.S.R. Kadapa,BRAHMAMGARIMATHAM ,safe,Upward trend,Safe
+Y.S.R. Kadapa,CHAPAD ,safe,Upward trend,Safe
+Y.S.R. Kadapa,CHINNAMANDYAM ,safe,Upward trend,Safe
+Y.S.R. Kadapa,CHINTAKOMMADINNE ,safe,Upward trend,Safe
+Y.S.R. Kadapa,CHITVEL ,safe,Upward trend,Safe
+Y.S.R. Kadapa,KALASAPADU ,safe,Upward trend,Safe
+Y.S.R. Kadapa,KAMALAPURAM ,safe,Upward trend,Safe
+Y.S.R. Kadapa,KASINAYANA ,safe,Upward trend,Safe
+Y.S.R. Kadapa,LAKKIREDDIPALLE ,safe,Upward trend,Safe
+Y.S.R. Kadapa,MUDDANUR ,safe,Upward trend,Safe
+Y.S.R. Kadapa,NANDALURU ,Safe,Upward trend,Safe
+Y.S.R. Kadapa,OBULAVARIPALLI ,safe,Upward trend,Safe
+Y.S.R. Kadapa,PENAGALURU ,safe,Upward trend,Safe
+Y.S.R. Kadapa,SIMHADRIPURAM ,safe,Upward trend,Safe
+Y.S.R. Kadapa,T.SUNDUPALLI ,safe,Upward trend,Safe
+Y.S.R. Kadapa,VEERAPANAYANIPALLE ,safe,Upward trend,Safe
+Y.S.R. Kadapa,LINGALA ,semi-critical,Upward trend,Safe
+Y.S.R. Kadapa,PRODDATUR ,semi-critical,Upward trend,Safe
+Y.S.R. Kadapa,CHAKRAYAPETA ,critical,Upward trend,Semi-critical
+Y.S.R. Kadapa,CHENNUR ,critical,Downward trend,Semi-critical
+Y.S.R. Kadapa,RAJUPALEM_KDP ,critical,Upward trend,Semi-critical
+Y.S.R. Kadapa,B.KODURU ,safe,Downward trend,Semi-critical
+Y.S.R. Kadapa,CUDDAPAH ,safe,Downward trend,Semi-critical
+Y.S.R. Kadapa,GALIVEEDU ,safe,Downward trend,Semi-critical
+Y.S.R. Kadapa,KHAZIPET ,safe,Downward trend,Semi-critical
+Y.S.R. Kadapa,KONDAPURAM_KDP ,safe,Downward trend,Semi-critical
+Y.S.R. Kadapa,MYLAVARAM_KDP ,safe,Downward trend,Semi-critical
+Y.S.R. Kadapa,PENDLIMARRI ,safe,Downward trend,Semi-critical
+Y.S.R. Kadapa,THONDUR ,safe,Downward trend,Semi-critical
+Y.S.R. Kadapa,VEMPALLI ,safe,Downward trend,Semi-critical
+Y.S.R. Kadapa,VONTIMITTA ,safe,Downward trend,Semi-critical

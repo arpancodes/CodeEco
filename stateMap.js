@@ -396,7 +396,7 @@ function stateMap(states) {
           select2017statedata(d.properties.st_nm);
           div.transition().duration(200).style("opacity", 0.9).style('z-index', 100)
           div
-            .html(d.properties.st_nm)
+            .html(d.properties.st_nm + "<br/> Stage of Ground Water Development (%):" + onlystate2017data[d.properties.st_nm.toUpperCase()][0]["Stage of Ground Water Development (%)"])
             .style("left", d3.event.pageX + "px")
             .style("top", d3.event.pageY - 28 + "px");
         })
@@ -450,7 +450,7 @@ function districtMap(states) {
     .select("body")
     .append("div")
     .attr("class", "tooltip")
-    .style("opacity", 1);
+    .style("opacity", 0);
 
   function render(selection) {
     selection.each(function () {
@@ -506,10 +506,11 @@ function districtMap(states) {
           console.log(d3.event.pageY);
           console.log('OVERING',d);
           select2017statedata(d.properties.st_nm);
+          console.log()
 
           div.transition().duration(200).style("opacity", 1).style('z-index', 100)
           div
-            .html(d.properties.district)
+            .html(d.properties.district + "<br/> Stage of Ground Water Development (%):" + onlydistrict2017data[d.properties.district][0]["Stage of Ground Water Development (%)"])
             .style("left", d3.event.pageX + "px")
             .style("top", d3.event.pageY - 28 + "px");
         })

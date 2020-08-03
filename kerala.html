@@ -423,8 +423,7 @@
       function filterdistrictdata(districtname, statusFilter = undefined) {
         deselectTabs();
 
-        document.getElementById("selecteddistrict").innerHTML =
-          " " + districtname;
+        
 
         var selectedtaluks = premansoondistricts[districtname];
         premansoontaluk = premansoondistricts[districtname];
@@ -489,6 +488,24 @@
               });
             }
             console.log(filteredData);
+
+            let diststatus;
+            let downwardNum = 0, upwardNum = 0;
+
+            filteredData.forEach((data, i) => {
+              if(i!==0){
+                console.log(data[3])
+                data[3] === "Downward Trend" ? downwardNum++ : upwardNum++
+              }
+              
+            })
+            console.log(downwardNum, upwardNum)
+
+            diststatus = downwardNum >= upwardNum ? "<p style='color:red;font-size:0.9rem'>Declining Trend</p>" : "<p  style='color:green;font-size:0.9rem'>Improving Trend</p>"
+            document.getElementById("selecteddistrict").innerHTML =
+              "" + districtname + " " + diststatus + "";
+
+              
 
             statusTabs.forEach((tab, i) => {
               if (!statusFilter && i === 0) tab.classList.add("selected");
@@ -865,7 +882,7 @@
       }
 
       init();
-      filterdistrictdata("THIRUVANANTHAPURAM", statusFilter);
+      // filterdistrictdata("THIRUVANANTHAPURAM", statusFilter);
     </script>
   </body>
 </html>
