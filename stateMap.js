@@ -19,29 +19,50 @@
     ) {
       if (error) throw error;
 
-      var karnatakadata = data2017.filter(element => element['Name of State'] === 'KARNATAKA')
-      var karnatakadata13 = data2013.filter(element => element['Name of State'] === 'KARNATAKA')
-      var tamilnadudata = data2017.filter(element => element['Name of State'] === 'TAMILNADU')
-      var tamilnadudata13 = data2013.filter(element => element['Name of State'] === 'TAMILNADU')
-      var keraladata = data2017.filter(element => element['Name of State'] === 'KERALA')
-      var keraladata13 = data2013.filter(element => element['Name of State'] === 'KERALA')
-      var goadata = data2017.filter(element => element['Name of State'] === 'GOA')
-      var goadata13 = data2013.filter(element => element['Name of State'] === 'GOA')
-      
-      localStorage.setItem("goadata", JSON.stringify(goadata))
-      localStorage.setItem("goadata13", JSON.stringify(goadata13))
-      localStorage.setItem("keraladata", JSON.stringify(keraladata))
-      localStorage.setItem("keraladata13", JSON.stringify(keraladata13))
-      localStorage.setItem("data2017", JSON.stringify(data2017))
-      localStorage.setItem("data2013", JSON.stringify(data2013))
-      localStorage.setItem("tamilnadudata13", JSON.stringify(tamilnadudata13))
-      localStorage.setItem("karnatakadata13", JSON.stringify(karnatakadata13))
-      localStorage.setItem("tamilnadudata", JSON.stringify(tamilnadudata))
-      localStorage.setItem("karnatakadata", JSON.stringify(karnatakadata))
+      var karnatakadata = data2017.filter(
+        (element) => element["Name of State"] === "KARNATAKA"
+      );
+      var karnatakadata13 = data2013.filter(
+        (element) => element["Name of State"] === "KARNATAKA"
+      );
+      var tamilnadudata = data2017.filter(
+        (element) => element["Name of State"] === "TAMILNADU"
+      );
+      var tamilnadudata13 = data2013.filter(
+        (element) => element["Name of State"] === "TAMILNADU"
+      );
+      var keraladata = data2017.filter(
+        (element) => element["Name of State"] === "KERALA"
+      );
+      var keraladata13 = data2013.filter(
+        (element) => element["Name of State"] === "KERALA"
+      );
+      var goadata = data2017.filter(
+        (element) => element["Name of State"] === "GOA"
+      );
+      var goadata13 = data2013.filter(
+        (element) => element["Name of State"] === "GOA"
+      );
+
+      localStorage.setItem("goadata", JSON.stringify(goadata));
+      localStorage.setItem("goadata13", JSON.stringify(goadata13));
+      localStorage.setItem("keraladata", JSON.stringify(keraladata));
+      localStorage.setItem("keraladata13", JSON.stringify(keraladata13));
+      localStorage.setItem("data2017", JSON.stringify(data2017));
+      localStorage.setItem("data2013", JSON.stringify(data2013));
+      localStorage.setItem("tamilnadudata13", JSON.stringify(tamilnadudata13));
+      localStorage.setItem("karnatakadata13", JSON.stringify(karnatakadata13));
+      localStorage.setItem("tamilnadudata", JSON.stringify(tamilnadudata));
+      localStorage.setItem("karnatakadata", JSON.stringify(karnatakadata));
       localStorage.setItem("postmonsoon", JSON.stringify(postmonsoon));
       localStorage.setItem("premonsoon", JSON.stringify(premonsoon));
 
-      data2017And2013Creator(data2017, data2013, statedata2017, districtdata2017);
+      data2017And2013Creator(
+        data2017,
+        data2013,
+        statedata2017,
+        districtdata2017
+      );
 
       var states = topojson.feature(
         topoMap,
@@ -55,12 +76,15 @@
         // topoMap.objects.india
       );
 
-      console.log(states)
-      console.log(districts)
+      console.log(states);
+      console.log(districts);
 
       // Map render
       var map = stateMap(states.features).width(800).height(700).scale(1200);
-      var mapdist = districtMap(districts.features).width(800).height(700).scale(1200);
+      var mapdist = districtMap(districts.features)
+        .width(800)
+        .height(700)
+        .scale(1200);
       d3.select("#map").call(map);
       d3.select("#map-dist").call(mapdist);
     });
@@ -87,7 +111,12 @@ let extractWater2017 = 0;
 let extractWater2013 = 0;
 let extractPercent2017 = 0;
 let extractPercent2013 = 0;
-function data2017And2013Creator(data2017, data2013, statedata2017, districtdata2017) {
+function data2017And2013Creator(
+  data2017,
+  data2013,
+  statedata2017,
+  districtdata2017
+) {
   allstate2017data = groupBy(data2017, "Name of State");
   alldist2017data = groupBy(data2017, "Name of District");
   allstate2013data = groupBy(data2013, "Name of State");
@@ -95,10 +124,9 @@ function data2017And2013Creator(data2017, data2013, statedata2017, districtdata2
   onlydistrict2017data = groupBy(districtdata2017, "District");
 }
 
-
 function select2017statedata(statename) {
-  console.log(allstate2017data)
-  console.log(statename)
+  console.log(allstate2017data);
+  console.log(statename);
   groundWater2017 = allstate2017data[statename.toUpperCase()].sum(
     "Total Annual Ground Water Recharge(Ham)"
   );
@@ -106,8 +134,9 @@ function select2017statedata(statename) {
     "Total Current Annual Ground Water Extraction(Ham)"
   );
   extractPercent2017 =
-    allstate2017data[statename.toUpperCase()].sum("Stage of Ground Water Development (%)") /
-    allstate2017data[statename.toUpperCase()].length;
+    allstate2017data[statename.toUpperCase()].sum(
+      "Stage of Ground Water Development (%)"
+    ) / allstate2017data[statename.toUpperCase()].length;
 
   groundWater2013 = allstate2013data[statename.toUpperCase()].sum(
     "Total Annual Ground Water Recharge(Ham)"
@@ -116,12 +145,21 @@ function select2017statedata(statename) {
     "Total Current Annual Ground Water Extraction(Ham)"
   );
   extractPercent2013 =
-    allstate2013data[statename.toUpperCase()].sum("Stage of Ground Water Development (%)") /
-    allstate2013data[statename.toUpperCase()].length;
+    allstate2013data[statename.toUpperCase()].sum(
+      "Stage of Ground Water Development (%)"
+    ) / allstate2013data[statename.toUpperCase()].length;
 
   groundWaterChart(groundWater2013, groundWater2017, statename.toUpperCase());
-  extractWaterChart(extractWater2013, extractWater2017, statename.toUpperCase());
-  extractPercentChart(extractPercent2013, extractPercent2017, statename.toUpperCase());
+  extractWaterChart(
+    extractWater2013,
+    extractWater2017,
+    statename.toUpperCase()
+  );
+  extractPercentChart(
+    extractPercent2013,
+    extractPercent2017,
+    statename.toUpperCase()
+  );
 }
 
 function groundWaterChart(groundWater2013, groundWater2017, statename) {
@@ -319,18 +357,20 @@ function stateMap(states) {
       selectState
         .append("path")
         .style("fill", function (d) {
-          renderStatesStats()
-          return paintState(d.properties.st_nm.toUpperCase())
-        }).style("stroke", function(d){
-          return "#ffffff"
-        }).style("stroke-width", function(d){
-          return "1.5px"
+          renderStatesStats();
+          return paintState(d.properties.st_nm.toUpperCase());
+        })
+        .style("stroke", function (d) {
+          return "#ffffff";
+        })
+        .style("stroke-width", function (d) {
+          return "1.5px";
         })
         .attr("d", path)
         .on("mousedown", function (d) {
-          const url = d.properties.st_nm.toLowerCase().split(' ').join('');
+          const url = d.properties.st_nm.toLowerCase().split(" ").join("");
           // alert(url)
-          window.location = `/${url}.html`
+          window.location = `/${url}.html`;
           //alert(d..properties.st_nm);
           console.log(d);
         })
@@ -343,13 +383,13 @@ function stateMap(states) {
           // </ul>
           //   `;
           console.log(d3.event.pageY);
-          console.log(d)
+          console.log(d);
           select2017statedata(d.properties.st_nm);
-          div.transition().duration(200).style("opacity", 0.9);
-          // div
-          //   .html(d.properties.st_nm)
-          //   .style("left", d3.event.pageX + "px")
-          //   .style("top", d3.event.pageY - 28 + "px");
+          div.transition().duration(200).style("opacity", 0.9).style('z-index', 100)
+          div
+            .html(d.properties.st_nm)
+            .style("left", d3.event.pageX + "px")
+            .style("top", d3.event.pageY - 28 + "px");
         })
         .on("mouseout", function (d) {
           div.transition().duration(500).style("opacity", 0);
@@ -366,10 +406,10 @@ function stateMap(states) {
         .attr("transform", function (d) {
           return "translate(" + path.centroid(d) + ")";
         })
-        .attr("dy", ".35em")
-        // .text(function (d) {
-        //   return d.properties.st_nm;
-        // });
+        .attr("dy", ".35em");
+      // .text(function (d) {
+      //   return d.properties.st_nm;
+      // });
     });
   } // render
   render.height = function (value) {
@@ -402,7 +442,7 @@ function districtMap(states) {
     .select("body")
     .append("div")
     .attr("class", "tooltip")
-    .style("opacity", 0);
+    .style("opacity", 1);
 
   function render(selection) {
     selection.each(function () {
@@ -430,19 +470,20 @@ function districtMap(states) {
       selectState
         .append("path")
         .style("fill", function (d) {
-          // distColour(d.properties.district);
-          renderDistStats()
-          return paintDistrict(d.properties.district)
-        }).style("stroke", function(d){
-          return "rgba(255,255,255,.5)"
-        }).style("stroke-width", function(d){
-          return "1px"
+          renderDistStats();
+          return paintDistrict(d.properties.district);
+        })
+        .style("stroke", function (d) {
+          return "rgba(255,255,255,.5)";
+        })
+        .style("stroke-width", function (d) {
+          return "1px";
         })
         .attr("d", path)
         .on("mousedown", function (d) {
-          const url = d.properties.st_nm.toLowerCase().split(' ').join('');
+          const url = d.properties.st_nm.toLowerCase().split(" ").join("");
           // alert(url)
-          window.location = `/${url}.html`
+          window.location = `/${url}.html`;
           //alert(d..properties.st_nm);
           console.log(d);
         })
@@ -455,13 +496,13 @@ function districtMap(states) {
           // </ul>
           //   `;
           console.log(d3.event.pageY);
-          console.log(d)
+          console.log('OVERING',d);
           select2017statedata(d.properties.st_nm);
-          div.transition().duration(200).style("opacity", 0.9);
-          // div
-          //   .html(d.properties.st_nm)
-          //   .style("left", d3.event.pageX + "px")
-          //   .style("top", d3.event.pageY - 28 + "px");
+          div.transition().duration(200).style("opacity", 1).style('z-index', 100)
+          div
+            .html(d.properties.district)
+            .style("left", d3.event.pageX + "px")
+            .style("top", d3.event.pageY - 28 + "px");
         })
         .on("mouseout", function (d) {
           div.transition().duration(500).style("opacity", 0);
@@ -478,10 +519,10 @@ function districtMap(states) {
         .attr("transform", function (d) {
           return "translate(" + path.centroid(d) + ")";
         })
-        .attr("dy", ".35em")
-        // .text(function (d) {
-        //   return d.properties.st_nm;
-        // });
+        .attr("dy", ".35em");
+      // .text(function (d) {
+      //   return d.properties.st_nm;
+      // });
     });
   } // render
   render.height = function (value) {
@@ -507,36 +548,36 @@ let criticalStates = 0;
 let semicriticalStates = 0;
 let safeStates = 0;
 
-function paintState(name){
-  const area = onlystate2017data[name] 
+function paintState(name) {
+  const area = onlystate2017data[name];
   let percent;
-  if(area)  {
-    percent = area[0]["Stage of Ground Water Development (%)"]
-  if(percent > 100) {
-    overexploitedStates++;
-    return "rgb(234, 51, 35)"
+  if (area) {
+    percent = area[0]["Stage of Ground Water Development (%)"];
+    if (percent > 100) {
+      overexploitedStates++;
+      return "rgb(234, 51, 35)";
+    }
+    if (percent > 90) {
+      criticalStates++;
+      return "rgb(140, 28, 100)";
+    }
+    if (percent > 70) {
+      semicriticalStates++;
+      return "rgb(93, 21, 147)";
+    }
+    if (percent > 30) {
+      safeStates++;
+      return "rgb(44, 20, 196)";
+    }
+    if (percent > 20) {
+      safeStates++;
+      return "rgb(0, 24, 245)";
+    }
+    safeStates++;
+    return "rgb(44, 20, 196)";
   }
-  if(percent > 90) {
-    criticalStates++
-    return "rgb(140, 28, 100)"
-  }
-  if(percent > 70) {
-    semicriticalStates++
-    return "rgb(93, 21, 147)"
-  }
-  if(percent > 30) {
-    safeStates++
-    return "rgb(44, 20, 196)"
-  }
-  if(percent > 20) {
-    safeStates++
-    return "rgb(0, 24, 245)"
-  }
-  safeStates++
-  return "rgb(44, 20, 196)"
-}
-  safeStates++
-  return "blue"
+  safeStates++;
+  return "blue";
 }
 
 let overexploitedDist = 0;
@@ -544,41 +585,40 @@ let criticalDist = 0;
 let semicriticalDist = 0;
 let safeDist = 0;
 
-function paintDistrict(name){
-
-  const area = onlydistrict2017data[name]
+function paintDistrict(name) {
+  const area = onlydistrict2017data[name];
   let percent;
-  if(area)  {
-    percent = area[0]["Stage of Ground Water Development (%)"]
-    if(percent > 100) {
+  if (area) {
+    percent = area[0]["Stage of Ground Water Development (%)"];
+    if (percent > 100) {
       overexploitedDist++;
-      return "rgb(234, 51, 35)"
+      return "rgb(234, 51, 35)";
     }
-    if(percent > 90) {
-      criticalDist++
-      console.log(criticalDist)
-      return "rgb(140, 28, 100)"
+    if (percent > 90) {
+      criticalDist++;
+      console.log(criticalDist);
+      return "rgb(140, 28, 100)";
     }
-    if(percent > 70) {
-      semicriticalDist++
-      return "rgb(93, 21, 147)"
+    if (percent > 70) {
+      semicriticalDist++;
+      return "rgb(93, 21, 147)";
     }
-    if(percent > 30) {
-      safeDist++
-      return "rgb(44, 20, 196)"
+    if (percent > 30) {
+      safeDist++;
+      return "rgb(44, 20, 196)";
     }
-    if(percent > 20) {
-      safeDist++
-      return "rgb(0, 24, 245)"
+    if (percent > 20) {
+      safeDist++;
+      return "rgb(0, 24, 245)";
     }
-    safeDist++
-    return "rgb(44, 20, 196)"
+    safeDist++;
+    return "rgb(44, 20, 196)";
   }
-    safeDist++
-    return "blue"
+  safeDist++;
+  return "blue";
 }
 
-function renderDistStats(){
+function renderDistStats() {
   document.getElementById("totalStages13").innerHTML = `
           <div class="stage over-exploited"><h2>Over Exploited</h2><p>${overexploitedDist}</p></div>
           <div class="stage critical"><h2>Critical</h2><p>${criticalDist}</p></div>
@@ -587,7 +627,7 @@ function renderDistStats(){
           `;
 }
 
-function renderStatesStats(){
+function renderStatesStats() {
   document.getElementById("totalStages").innerHTML = `
           <div class="stage over-exploited"><h2>Over Exploited</h2><p>${overexploitedStates}</p></div>
           <div class="stage critical"><h2>Critical</h2><p>${criticalStates}</p></div>
@@ -596,4 +636,4 @@ function renderStatesStats(){
           `;
 }
 
-renderDistStats()
+renderDistStats();
