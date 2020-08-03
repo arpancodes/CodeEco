@@ -37,10 +37,10 @@ select#taluks {
   font-size: 2rem;
   font-weight: bold;
 }
-.highcharts-axis-labels text,
+/* .highcharts-axis-labels text,
 text.highcharts-title {
-  /* fill: white !important; */
-}
+  /* fill: white !important;
+} */
 #premonsoon, #postmonsoon, #arimagraph {
   margin: 25px 0px;
   box-shadow: 0 0 10px rgb(204, 204, 204);

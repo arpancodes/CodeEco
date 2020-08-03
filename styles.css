@@ -480,12 +480,12 @@ body > #search-state div {
   padding-left: 35px;
 }
 .map-show {
-  display: block;
+  /* display: block; */
   opacity: 1;
   z-index: 10;
 }
 .map-hide {
- display: none; 
+ /* display: none;  */
   opacity: 0; 
   z-index: -10;
 }

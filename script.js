@@ -56,7 +56,7 @@ $.ajax({
 //  "Puducherry"
 // ]
 
-var states = ["Karnataka", "Tamil Nadu"];
+var states = ["Karnataka", "Tamil Nadu", "Goa", "Kerala"];
 
 autocomplete(document.getElementById("myInput"), states);
 

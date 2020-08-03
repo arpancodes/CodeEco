@@ -1,6 +1,6 @@
 (function () {
   d3.queue()
-    .defer(d3.json, "ne_10m_admin_1_India_Official.json")
+    .defer(d3.json, "india.json")
     .defer(d3.csv, "2017data.csv")
     .defer(d3.csv, "2013data.csv")
     .defer(d3.csv, "postmonsoon.csv")
@@ -43,7 +43,16 @@
       var goadata13 = data2013.filter(
         (element) => element["Name of State"] === "GOA"
       );
+      var andhrapradeshdata = data2017.filter(
+        (element) => element["Name of State"] === "ANDHRA PRADESH"
+      );
+      var andhrapradeshdata13 = data2013.filter(
+        (element) => element["Name of State"] === "ANDHRA PRADESH"
+      );
 
+      
+      localStorage.setItem("andhrapradeshdata13", JSON.stringify(andhrapradeshdata13));
+      localStorage.setItem("andhrapradeshdata", JSON.stringify(andhrapradeshdata));
       localStorage.setItem("goadata", JSON.stringify(goadata));
       localStorage.setItem("goadata13", JSON.stringify(goadata13));
       localStorage.setItem("keraladata", JSON.stringify(keraladata));
@@ -435,7 +444,6 @@ function districtMap(states) {
   var width = 800,
     height = 700,
     scale = 1200;
-  var color = ["#dadaeb", "#bcbddc", "#9e9ac8", "#807dba", "#6a51a3"];
 
   // Define the div for the tooltip
   var div = d3
@@ -498,6 +506,7 @@ function districtMap(states) {
           console.log(d3.event.pageY);
           console.log('OVERING',d);
           select2017statedata(d.properties.st_nm);
+
           div.transition().duration(200).style("opacity", 1).style('z-index', 100)
           div
             .html(d.properties.district)

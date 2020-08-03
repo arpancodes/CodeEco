@@ -27,7 +27,7 @@
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">About Us</a></li>
-          <li><a data-mode="dark" id="theme-btn" disabled class="cta">ANALYSE</a></li>
+          <li><a data-mode="dark" disabled class="cta">ANALYSE</a></li>
         </ul>
       </nav>
     </header>
@@ -47,7 +47,9 @@
     </form>
     <div id="totalStages"></div>
     <div id="totalStages13"></div>
+    
     <div id="map-section" class="container">
+      
       <!-- <h1>Hover on the Map to see the details!</h1> -->
       <!-- <div class="stats">
         <div class="chart" id="groundWaterdonut"></div>
@@ -73,6 +75,47 @@
         <div id="map-dist">
           <div id="select"></div>
         </div>
+      </div>
+      <div style="color: white;">
+        <svg
+          width="200"
+          height="230"
+          style="color: white; margin-left: -150px;"
+        >
+          <!-- <rect x="50" y="55" width="30" height="30" style="fill:rgb(187, 39, 57);stroke:gray;stroke-width:1;" /> <text x="90" y="75" fill="rgb(187, 39, 57)">Exploited</text> -->
+          <rect
+            x="50"
+            y="55"
+            width="30"
+            height="30"
+            style="fill: rgb(234, 51, 35); stroke: gray; stroke-width: 1;"
+          />
+          <text x="90" y="75" fill="rgb(234, 51, 35)">Over Exploited</text>
+          <rect
+            x="50"
+            y="90"
+            width="30"
+            height="30"
+            style="fill: rgb(140, 28, 100); stroke: gray; stroke-width: 1;"
+          />
+          <text x="90" y="110" fill="rgb(140, 28, 100)">Critical</text>
+          <rect
+            x="50"
+            y="125"
+            width="30"
+            height="30"
+            style="fill: rgb(93, 21, 147); stroke: gray; stroke-width: 1;"
+          />
+          <text x="90" y="145" fill="rgb(93, 21, 147)">Semi Critical</text>
+          <rect
+            x="50"
+            y="160"
+            width="30"
+            height="30"
+            style="fill: rgb(44, 20, 196); stroke: gray; stroke-width: 1;"
+          />
+          <text x="90" y="180" fill="rgb(44, 20, 196)">Safe</text>
+        </svg>
       </div>
     </div>
     <!-- </td>
