@@ -24,11 +24,14 @@ div.tooltip {
     height: 30px;
     padding: 2px;
     font: 12px sans-serif;
-    background: steelblue;
+    background: #000000;
     border: 0px;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     pointer-events: none;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 /* path {
