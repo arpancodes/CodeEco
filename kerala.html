@@ -9,6 +9,7 @@
     <script type="text/javascript" src="d3.min.js"></script>
     <script type="text/javascript" src="d3.geo.min.js"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-3d.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
@@ -550,6 +551,13 @@
         Highcharts.chart("premonsoon", {
           chart: {
             type: "column",
+            options3d: {
+              enabled: true,
+              alpha: 15,
+              beta: 15,
+              depth: 50,
+              viewDistance: 25,
+            },
           },
           title: {
             text:
@@ -580,6 +588,7 @@
           credits: {
             enabled: false,
           },
+          
           series: [
             {
               name: "Pre Mansoon",
@@ -603,6 +612,13 @@
         Highcharts.chart("postmonsoon", {
           chart: {
             type: "column",
+            options3d: {
+              enabled: true,
+              alpha: 15,
+              beta: 15,
+              depth: 50,
+              viewDistance: 25,
+            },
           },
           title: {
             text:
@@ -633,6 +649,7 @@
           credits: {
             enabled: false,
           },
+          
           series: [
             {
               name: "Post Monsoon",
