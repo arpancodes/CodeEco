@@ -491,7 +491,7 @@ function districtMap(states) {
         .on("mousedown", function (d) {
           const url = d.properties.st_nm.toLowerCase().split(" ").join("");
           // alert(url)
-          window.location = `/${url}.html`;
+          window.location = `./${url}.html`;
           //alert(d..properties.st_nm);
           console.log(d);
         })
